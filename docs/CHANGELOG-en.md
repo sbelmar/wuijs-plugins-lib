@@ -7,13 +7,20 @@
 
 # Change Log
 
+## [v0.6.2] - 2026-05-08
+
+Features:
+
+1. Synchronized with `wuijs-main-lib` version `0.6.2`.
+
 ## [v0.6.1] - 2026-05-06
 
 Features:
 
-1. Release of the official documentation site for WUI/JS: [https://docs.wuijs.dev](https://docs.wuijs.dev)
-2. Version synchronization with `wuijs-main-lib`.
-3. Update WUIPluginThemes version class to `0.6`.
+1. Synchronized with `wuijs-main-lib` version `0.6.1`.
+2. Release of the official documentation site for WUI/JS: [https://docs.wuijs.dev](https://docs.wuijs.dev)
+3. Version synchronization with `wuijs-main-lib`.
+4. Update WUIPluginThemes version class to `0.6`.
 	- Added CSS variables associated with the `wui-codebox` component (lab package).
 	- Added CSS variables associated with the `wui-markdown` component (lab package).
 	- Synchronized the `default` theme template version with the plugin version.
@@ -22,7 +29,8 @@ Features:
 
 Features:
 
-1. Update WUIPluginThemes version class to `0.6`.
+1. Synchronized with `wuijs-main-lib` version `0.6.0`.
+2. Update WUIPluginThemes version class to `0.6`.
 	- Added `--wui-table-width` CSS var.
 	- Added `--wui-table-column-bordercolor-disabled` CSS var.
 	- Added `--wui-table-column-bgcolor-disabled` CSS var.
