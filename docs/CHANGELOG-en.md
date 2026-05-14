@@ -7,6 +7,14 @@
 
 # Change Log
 
+## [v0.7.0] - 2026-05-14
+
+Features:
+
+1. Synchronized with `wuijs-main-lib` version `0.7.0`.
+2. WUIPluginSelector version class update to `0.4`.
+	- Added `.root.css` file with CSS default variable values.
+
 ## [v0.6.2] - 2026-05-08
 
 Features:
@@ -19,8 +27,7 @@ Features:
 
 1. Synchronized with `wuijs-main-lib` version `0.6.1`.
 2. Release of the official documentation site for WUI/JS: [https://docs.wuijs.dev](https://docs.wuijs.dev)
-3. Version synchronization with `wuijs-main-lib`.
-4. Update WUIPluginThemes version class to `0.6`.
+3. WUIPluginThemes version class update to `0.6`.
 	- Added CSS variables associated with the `wui-codebox` component (lab package).
 	- Added CSS variables associated with the `wui-markdown` component (lab package).
 	- Synchronized the `default` theme template version with the plugin version.
@@ -30,7 +37,7 @@ Features:
 Features:
 
 1. Synchronized with `wuijs-main-lib` version `0.6.0`.
-2. Update WUIPluginThemes version class to `0.6`.
+2. WUIPluginThemes version class update to `0.6`.
 	- Added `--wui-table-width` CSS var.
 	- Added `--wui-table-column-bordercolor-disabled` CSS var.
 	- Added `--wui-table-column-bgcolor-disabled` CSS var.
@@ -46,7 +53,7 @@ Features:
 Features:
 
 1. Synchronized the version of the `wuijs-plugins-lib` library with that of `wuijs-main-lib` in order to maintain the integrity of the project and improve the reading of compatibility between libraries.
-2. Update WUIPluginThemes version class to `0.4`.
+2. WUIPluginThemes version class update to `0.4`.
 	- Added `--wui-modal-mobile-page-box-topmargin` CSS var to improve compatibility with iPhone screens.
 	- Added `--wui-modal-mobile-page-box-borderradius-maximized` CSS var to improve compatibility with iPhone screens.
 	- Added `--wui-menubar-mobile-bar-horizpadding` CSS var to improve compatibility with iPhone screens.

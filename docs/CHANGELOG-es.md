@@ -7,6 +7,14 @@
 
 # Registro de Cambios
 
+## [v0.7.0] - 2026-05-14
+
+Características:
+
+1. Se sincronizó la versión con la versión `0.7.0` de la librería `wuijs-main-lib`
+2. Se actualizó versión clase WUIPluginSelector a `0.4`.
+	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
+
 ## [v0.6.2] - 2026-05-08
 
 1. Se sincronizó la versión con la versión `0.6.2` de la librería `wuijs-main-lib`
@@ -19,8 +27,7 @@ Características:
 
 1. Se sincronizó la versión con la versión `0.6.1` de la librería `wuijs-main-lib`
 2. Liberación del sitio oficial de documentación de WUI/JS: [https://docs.wuijs.dev](https://docs.wuijs.dev)
-3. Sincronización de versión con `wuijs-main-lib`.
-4. Actualización versión clase WUIPluginThemes a `0.6`.
+3. Se actualizó versión clase WUIPluginThemes a `0.6`.
 	- Se agregó la variable CSS asociadas al componente `wui-codebox` (paquete lab).
 	- Se agregó la variable CSS asociadas al componente `wui-markdown` (paquete lab).
 	- Se sincronizó la versión del template `default` con el de la versión del plugin.
@@ -30,7 +37,7 @@ Características:
 Características:
 
 1. Se sincronizó la versión con la versión `0.6.0` de la librería `wuijs-main-lib`
-2. Actualización versión clase WUIPluginThemes a `0.5`.
+2. Se actualizó versión clase WUIPluginThemes a `0.5`.
 	- Se agregó la variable CSS `--wui-table-width`.
 	- Se agregó la variable CSS `--wui-table-column-bordercolor-disabled`.
 	- Se agregó la variable CSS `--wui-table-column-bgcolor-disabled`.
@@ -47,7 +54,7 @@ Características:
 Características:
 
 1. Se sincronizó la versión de la librería `wuijs-plugins-lib` con la de `wuijs-main-lib` con el fin de mantener la integridad del proyecto y mejorar la lectura de compatibilidad entre librerías.
-2. Actualización versión clase WUIPluginThemes a `0.4`.
+2. Se actualizó versión clase WUIPluginThemes a `0.4`.
 	- Se agregó la variable CSS `--wui-modal-mobile-page-box-topmargin` para mejorar compatibilidad con pantallas iPhone.
 	- Se agregó la variable CSS `--wui-modal-mobile-page-box-borderradius-maximized` para mejorar compatibilidad con pantallas iPhone.
 	- Se agregó la variable CSS `--wui-menubar-mobile-bar-horizpadding` para mejorar compatibilidad con pantallas iPhone.
@@ -62,7 +69,7 @@ Características:
 
 1. Habilitación de instalación vía NPM.
 2. Cambio de nombre del directorio fuente de `src/wuiplugins` a `src/wui-js/plugins` para dar soporte a integración con otras librerías del proyecto WUI/JS.
-3. Actualización versión clase WUIPluginThemes a `0.3`.
+3. Se actualizó versión clase WUIPluginThemes a `0.3`.
 	- Se agregó la variable global CSS `--wuiplugin-theme-name` para identificar el tema activo.
 	- Se actualizó el método `getTheme()` para que devuelva el valor de la variable global CSS `--wuiplugin-theme-name` del tema activo.
 
@@ -74,10 +81,10 @@ Características:
 2. Se agregó la carpeta `legacy/` con versiones anteriores de los archivos fuente (`WUIPluginThemes-0.1`, `WUIPluginSelector-0.2`).
 3. Se renombró el directorio `src/wuiplugin/` (antes `src/WUIPlugins/`) para usar una convención de nombres en minúscula consistente.
 4. Se renombró el directorio `legacy/WUIPlugin/` (antes `legacy/WUIPlugins/`) para usar una convención de nombres en singular consistente.
-5. Actualización versión clase WUIPluginThemes a `0.2`.
+5. Se actualizó versión clase WUIPluginThemes a `0.2`.
 	- Se renombró el directorio y archivos a minúscula.
 	- Se cambió la opacidad de la variable CSS `--wui-modal-message-box-bgcolor` de `80%` a `100%` en el tema base.
-6. Actualización versión clase WUIPluginSelector a `0.3`.
+6. Se actualizó versión clase WUIPluginSelector a `0.3`.
 	- Se renombró el directorio y archivos a minúscula.
 
 ## [v0.1.0] - 2025-10-15
