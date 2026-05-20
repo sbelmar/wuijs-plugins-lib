@@ -1,0 +1,690 @@
+/*
+ * @file light-0.7.css
+ * @version 0.7
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+.wuiplugin-themes.default.light {
+
+	/* wuiplugin-theme */
+
+	--wuiplugin-theme-name: "default";
+
+	/* wui-scrolly */
+
+	--wui-scrolly-paging-bgcolor-hidden: rgb(from #444 r g b / 20%);
+	--wui-scrolly-paging-bgcolor-visible: rgb(from #444 r g b / 80%);
+
+	/* wui-icon */
+
+	--wui-icon-bgcolor-out: rgb(from #353a40 r g b / 70%);
+	--wui-icon-bgcolor-over: #353a40;
+
+	/* wui-loader */
+
+	--wui-loader-color: #353a40;
+
+	/* wui-tooltip */
+
+	--wui-tooltip-open-delay: .2s;
+	--wui-tooltip-bgcolor: #1f2429;
+	--wui-tooltip-textcolor: #fff;
+
+	/* wui-modal */
+
+	--wui-modal-overlay-bgcolor: rgb(from #010203 r g b / 20%);
+	--wui-modal-box-borderradius: 17px;
+	--wui-modal-box-bgcolor: rgb(from #efeff6 r g b / 100%);
+	--wui-modal-back-textcolor: #1e90ff;
+	--wui-modal-close-bgcolor: #353a40;
+	--wui-modal-topbar-height: 4px;
+	--wui-modal-title-textfont: Arial, Helvetica, Verdana, sans-serif;
+	--wui-modal-title-textcase: none;
+	--wui-modal-title-textcolor: #000;
+	--wui-modal-body-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-modal-body-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+	--wui-modal-footer-bordercolor: transparent;
+	--wui-modal-button-submit-bgcolor-mobile: rgb(from #959da5 r g b / 20%);
+	--wui-modal-button-submit-textcolor-mobile: #1e90ff;
+	--wui-modal-button-warning-textcolor-mobile: #f44343;
+	--wui-modal-message-box-width: 280px;
+	--wui-modal-message-box-bgcolor: rgb(from #efeff6 r g b / 100%);
+	--wui-modal-message-box-textcolor: #2d3a47;
+	--wui-modal-message-mobile-box-width: 280px;
+	--wui-modal-message-mobile-footer-bordercolor: #d5dce3;
+	--wui-modal-message-mobile-button-bordercolor: #d5dce3;
+	--wui-modal-message-linkcolor: #1e90ff;
+	--wui-modal-page-box-width: 800px;
+	--wui-modal-page-box-height: 90%;
+	--wui-modal-page-box-borderradius: 10px;
+	--wui-modal-page-box-maxheight: 640px;
+	--wui-modal-page-box-bgcolor: rgb(from #efeff6 r g b / 100%);
+	--wui-modal-page-header-topbar-bgcolor: #d5dce3;
+	--wui-modal-page-header-bordercolor: #d5dce3;
+	--wui-modal-slidepage-box-margin: 10px;
+	--wui-modal-smallpage-box-width: 340px;
+	--wui-modal-smallpage-box-height: 280px;
+	--wui-modal-mobile-page-box-topmargin: 0px;
+	--wui-modal-mobile-page-box-borderradius-maximized: 0px;
+
+	/* wui-paging */
+
+	--wui-paging-page-transition-time: .4s;
+	--wui-paging-page-bgcolor: transparent;
+	--wui-paging-page-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-paging-page-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+
+	/* wui-slider */
+
+	--wui-slider-paging-bgcolor-hidden: rgb(from #fff r g b / 20%);
+	--wui-slider-paging-bgcolor-visible: rgb(from #fff r g b / 80%);
+
+	/* wui-tabs */
+
+	--wui-tabs-tab-bgcolor-out: #fdfdfe;
+	--wui-tabs-tab-bgcolor-over: #f6f6f6;
+	--wui-tabs-tab-iconcolor-out: #1e90ff;
+	--wui-tabs-tab-iconcolor-over: #1e90ff;
+	--wui-tabs-tab-iconcolor-mobile: #1e90ff;
+	--wui-tabs-tab-textcolor-out: #2d3a47;
+	--wui-tabs-tab-textcolor-over: #1e90ff;
+
+	/* wui-menubar */
+
+	--wui-menubar-shadowcolor: #959da5;
+	--wui-menubar-shadowopacity: 40%;
+	--wui-menubar-margin: 10px;
+	--wui-menubar-bar-borderradius: 10px;
+	--wui-menubar-bar-bordercolor: #f0f0f3;
+	--wui-menubar-bar-bgcolor-top: #f0f0f3;
+	--wui-menubar-bar-bgcolor-bottom: #f0f0f3;
+	--wui-menubar-bar-button-borderradius: 10px;
+	--wui-menubar-bar-button-bgcolor-out: transparent;
+	--wui-menubar-bar-button-bgcolor-over: rgb(from #d5dce3 r g b / 40%);
+	--wui-menubar-bar-button-bgcolor-selected: #1e90ff;
+	--wui-menubar-bar-button-bgcolor-disabled: transparent;
+	--wui-menubar-bar-button-iconsize: 24px;
+	--wui-menubar-bar-button-iconcolor-out: rgb(from #353a40 r g b / 70%);
+	--wui-menubar-bar-button-iconcolor-over: #353a40;
+	--wui-menubar-bar-button-iconcolor-selected: #f6f6f6;
+	--wui-menubar-bar-button-iconcolor-disabled: #d5dce3;
+	--wui-menubar-bar-button-textcolor-out: #2d3a47;
+	--wui-menubar-bar-button-textcolor-over: #1f2937;
+	--wui-menubar-bar-button-textcolor-selected: #f6f6f6;
+	--wui-menubar-bar-button-textcolor-disabled: #d5dce3;
+	--wui-menubar-expander-bgcolor-out: transparent;
+	--wui-menubar-expander-bgcolor-over: rgb(from #d5dce3 r g b / 40%);
+	--wui-menubar-expander-iconsize: 16px;
+	--wui-menubar-expander-iconcolor-out: #444;
+	--wui-menubar-expander-iconcolor-over: #000;
+	--wui-menubar-expander-expandicon-src: none;
+	--wui-menubar-expander-contracticon-src: none;
+	--wui-menubar-opener-iconsize: 16px;
+	--wui-menubar-opener-openicon-src: none;
+	--wui-menubar-opener-closeicon-src: none;
+	--wui-menubar-submenu-borderradius: 10px;
+	--wui-menubar-submenu-bordercolor: #f0f0f3;
+	--wui-menubar-submenu-bgcolor: #fdfdfe;
+	--wui-menubar-submenu-button-borderradius: 10px;
+	--wui-menubar-submenu-button-bgcolor-out: transparent;
+	--wui-menubar-submenu-button-bgcolor-over: rgb(from #d5dce3 r g b / 40%);
+	--wui-menubar-submenu-button-bgcolor-selected: #1e90ff;
+	--wui-menubar-submenu-button-bgcolor-disabled: transparent;
+	--wui-menubar-submenu-button-iconsize: 24px;
+	--wui-menubar-submenu-button-iconcolor-out: rgb(from #353a40 r g b / 70%);
+	--wui-menubar-submenu-button-iconcolor-over: #353a40;
+	--wui-menubar-submenu-button-iconcolor-selected: #f6f6f6;
+	--wui-menubar-submenu-button-iconcolor-disabled: #d5dce3;
+	--wui-menubar-submenu-button-textcolor-out: #2d3a47;
+	--wui-menubar-submenu-button-textcolor-over: #1f2937;
+	--wui-menubar-submenu-button-textcolor-selected: #f6f6f6;
+	--wui-menubar-submenu-button-textcolor-disabled: #d5dce3;
+	--wui-menubar-tooltip-bgcolor: #000;
+	--wui-menubar-tooltip-textcolor: #fff;
+	--wui-menubar-bubble-bgcolor: #f44343;
+	--wui-menubar-bubble-textcolor: #fff;
+	--wui-menubar-mobile-bar-bgcolor-top: #f0f0f3;
+	--wui-menubar-mobile-bar-bgcolor-bottom: #f0f0f3;
+	--wui-menubar-mobile-bar-horizpadding: 10px;
+	--wui-menubar-mobile-bar-vertpadding: 0px;
+	--wui-menubar-mobile-opener-closeicon-src: none;
+
+	/* wui-tree (lab) */
+
+	--wui-tree-node-borderradius: 10px;
+	--wui-tree-node-borderwidth: 1px;
+	--wui-tree-node-bordercolor-out: transparent;
+	--wui-tree-node-bordercolor-over: #f6f6f6;
+	--wui-tree-node-bgcolor-out: transparent;
+	--wui-tree-node-bgcolor-over: #f6f6f6;
+	--wui-tree-node-horizpadding: 10px;
+	--wui-tree-node-vertpadding: 2px;
+	--wui-tree-node-iconsize: 16px;
+	--wui-tree-node-iconcolor-out: rgb(from #353a40 r g b / 70%);
+	--wui-tree-node-iconcolor-over: #353a40;
+	--wui-tree-node-iconcolor-disabled: #d5dce3;
+	--wui-tree-node-textcolor-out: #2d3a47;
+	--wui-tree-node-textcolor-over: #1f2937;
+	--wui-tree-node-textcolor-disabled: #d5dce3;
+
+	/* wui-list */
+
+	--wui-list-shadowcolor: #959da5;
+	--wui-list-borderradius: 10px;
+	--wui-list-borderwidth: 0px;
+	--wui-list-bordercolor: #f0f0f3;
+	--wui-list-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-list-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+	--wui-list-row-height: 44px;
+	--wui-list-row-borderwidth: 1px;
+	--wui-list-row-bordercolor-out: #f0f0f3;
+	--wui-list-row-bordercolor-over: #f0f0f3;
+	--wui-list-row-bgcolor-out: #fdfdfe;
+	--wui-list-row-bgcolor-over: #f6f6f6;
+	--wui-list-row-textcolor-out: #2d3a47;
+	--wui-list-row-textcolor-over: #1f2937;
+	--wui-list-row-textcolor-disabled: #d5dce3;
+	--wui-list-innerrow-borderwidth: 1px;
+	--wui-list-innerrow-bordercolor: #f0f0f3;
+	--wui-list-innerrow-bgcolor: rgb(from #f6f6f6 r g b / 20%);
+	--wui-list-innerrow-textcolor: rgb(from #2d3a47 r g b / 60%);
+	--wui-list-buttons-bgcolor: transparent;
+	--wui-list-button-size: 48px;
+	--wui-list-button-hmargin: 8px;
+	--wui-list-button-borderradius: 50%;
+	--wui-list-button-bgcolor-enabled: #1e90ff;
+	--wui-list-button-bgcolor-disabled: #d5dce3;
+
+	/* wui-table */
+
+	--wui-table-width: auto;
+	--wui-table-shadowcolor: #959da5;
+	--wui-table-borderradius: 10px;
+	--wui-table-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-table-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+	--wui-table-column-borderwidth: 1px;
+	--wui-table-column-bordercolor-out: rgb(from #1e90ff r g b / 10%);
+	--wui-table-column-bordercolor-over: #1e90ff;
+	--wui-table-column-bordercolor-selected: #1e90ff;
+	--wui-table-column-bordercolor-disabled: #d5dce3;
+	--wui-table-column-bgcolor-out: #f6f6f6;
+	--wui-table-column-bgcolor-over: #f6f6f6;
+	--wui-table-column-bgcolor-selected: #1e90ff;
+	--wui-table-column-bgcolor-disabled: #f0f0f3;
+	--wui-table-column-textcolor-out: #444;
+	--wui-table-column-textcolor-over: #000;
+	--wui-table-column-textcolor-selected: #1e90ff;
+	--wui-table-column-textcolor-disabled: #d5dce3;
+	--wui-table-column-sorter-iconsize: 16px;
+	--wui-table-column-sorter-iconcolor-out: #444;
+	--wui-table-column-sorter-iconcolor-over: #000;
+	--wui-table-column-sorter-iconcolor-disabled: #d5dce3;
+	--wui-table-column-sorter-ascicon-src: none;
+	--wui-table-column-sorter-descicon-src: none;
+	--wui-table-column-resizer-bordercolor-out: rgb(from #1e90ff r g b / 10%);
+	--wui-table-column-resizer-bordercolor-over: rgb(from #1e90ff r g b / 10%);
+	--wui-table-column-dragger-bordercolor-over: #444;
+	--wui-table-column-dragger-bgcolor-drop: rgb(from #1e90ff r g b / 10%);
+	--wui-table-row-borderwidth: 1px;
+	--wui-table-row-bordercolor-out: #f0f0f3;
+	--wui-table-row-bordercolor-over: #f0f0f3;
+	--wui-table-row-bordercolor-selected: #1e90ff;
+	--wui-table-row-bordercolor-disabled: #f0f0f3;
+	--wui-table-row-bgcolor-out: #fdfdfe;
+	--wui-table-row-bgcolor-over: #f6f6f6;
+	--wui-table-row-bgcolor-selected: #1e90ff;
+	--wui-table-row-bgcolor-disabled: transparent;
+	--wui-table-row-textcolor-out: #2d3a47;
+	--wui-table-row-textcolor-over: #1f2937;
+	--wui-table-row-textcolor-selected: #f6f6f6;
+	--wui-table-row-textcolor-disabled: #d5dce3;
+
+	/* wui-form */
+
+	--wui-form-header-bordercolor: #d5dce3;
+	--wui-form-header-titlecolor: #000;
+	--wui-form-body-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-form-body-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+	--wui-form-line-bordercolor: #d5dce3;
+	--wui-form-fieldset-bgcolor: #fff;
+	--wui-form-legend-texttransform: uppercase;
+	--wui-form-legend-textcolor: rgb(from #2d3a47 r g b / 60%);
+	--wui-form-label-textcolor-out: #2d3a47;
+	--wui-form-label-textcolor-focus: #1e90ff;
+	--wui-form-label-textcolor-notempty: rgb(from #2d3a47 r g b / 40%);
+	--wui-form-label-textcolor-disabled: #d5dce3;
+	--wui-form-input-height: 30px;
+	--wui-form-input-borderwidth: 1px;
+	--wui-form-input-borderradius: 10px;
+	--wui-form-input-bordercolor-out: rgb(from #1e90ff r g b / 20%);
+	--wui-form-input-bordercolor-focus: #1e90ff;
+	--wui-form-input-bordercolor-invalid: #f44343;
+	--wui-form-input-bordercolor-disabled: #d5dce3;
+	--wui-form-input-bgcolor-out: #f6f6f6;
+	--wui-form-input-bgcolor-focus: #f6f6f6;
+	--wui-form-input-bgcolor-disabled: #d5dce3;
+	--wui-form-input-textcolor-out: #2d3a47;
+	--wui-form-input-textcolor-over: #1f2937;
+	--wui-form-input-textcolor-disabled: #d5dce3;
+	--wui-form-date-opener-iconsize: 30px;
+	--wui-form-date-opener-iconcolor-out: #000;
+	--wui-form-date-opener-iconcolor-over: #1e90ff;
+	--wui-form-date-opener-iconcolor-disabled: #d5dce3;
+	--wui-form-date-opener-openicon-src: none;
+	--wui-form-date-opener-closeicon-src: none;
+	--wui-form-time-opener-iconsize: 30px;
+	--wui-form-time-opener-iconcolor-out: #000;
+	--wui-form-time-opener-iconcolor-over: #1e90ff;
+	--wui-form-time-opener-iconcolor-disabled: #d5dce3;
+	--wui-form-time-opener-openicon-src: none;
+	--wui-form-time-opener-closeicon-src: none;
+	--wui-form-range-thumb-size: 20px;
+	--wui-form-range-thumb-bgcolor-out: #1e90ff;
+	--wui-form-range-thumb-bgcolor-over: #1e90ff;
+	--wui-form-range-thumb-bgcolor-disabled: #d5dce3;
+	--wui-form-range-trackbar-height: 7px;
+	--wui-form-range-trackbar-borderwidth: 1px;
+	--wui-form-range-trackbar-bordercolor-out: #f0f0f3;
+	--wui-form-range-trackbar-bordercolor-focus: #1e90ff;
+	--wui-form-range-trackbar-bordercolor-disabled: #d5dce3;
+	--wui-form-range-trackbar-bgcolor-out: #f6f6f6;
+	--wui-form-range-trackbar-bgcolor-focus: #f6f6f6;
+	--wui-form-range-trackbar-bgcolor-disabled: #d5dce3;
+	--wui-form-select-opener-iconsize: 30px;
+	--wui-form-select-opener-iconcolor-out: #000;
+	--wui-form-select-opener-iconcolor-over: #1e90ff;
+	--wui-form-select-opener-iconcolor-disabled: #d5dce3;
+	--wui-form-select-opener-openicon-src: none;
+	--wui-form-select-opener-closeicon-src: none;
+	--wui-form-data-textcolor-out: #1e90ff;
+	--wui-form-data-textcolor-disabled: #d5dce3;
+	--wui-form-progress-borderwidth: 1px;
+	--wui-form-progress-bordercolor: #f0f0f3;
+	--wui-form-progress-valuecolor: #1e90ff;
+	--wui-form-progress-bgcolor: #f6f6f6;
+	--wui-form-button-minwidth: 100px;
+	--wui-form-text-textcolor-out: #888;
+	--wui-form-text-textcolor-disabled: #d5dce3;
+	--wui-form-text-linkcolor-out: #1e90ff;
+	--wui-form-text-linkcolor-highlight: #1e90ff;
+	--wui-form-message-shadowcolor: #959da5;
+	--wui-form-message-bgcolor: #fdfdfe;
+	--wui-form-message-textcolor: #2d3a47;
+	--wui-form-message-highlight-bgcolor: #1e90ff;
+	--wui-form-message-highlight-textcolor: #fff;
+	--wui-form-mobile-field-bordercolor: rgb(from #1e90ff r g b / 10%);
+	--wui-form-mobile-label-textcolor: #444;
+	--wui-form-mobile-input-height: 34px;
+	--wui-form-mobile-input-bgcolor: rgb(from #1e90ff r g b / 4%);
+	--wui-form-mobile-input-borderradius: 15px;
+
+	/* wui-selectpicker */
+
+	--wui-selectpicker-borderradius: 10px;
+	--wui-selectpicker-borderwidth: 0px;
+	--wui-selectpicker-bordercolor-out: transparent;
+	--wui-selectpicker-bordercolor-over: transparent;
+	--wui-selectpicker-bordercolor-disabled: transparent;
+	--wui-selectpicker-bgcolor: #f6f6f6;
+	--wui-selectpicker-opener-iconsize: 30px;
+	--wui-selectpicker-opener-iconcolor-out: #000;
+	--wui-selectpicker-opener-iconcolor-over: #1e90ff;
+	--wui-selectpicker-opener-iconcolor-disabled: #d5dce3;
+	--wui-selectpicker-opener-openicon-src: none;
+	--wui-selectpicker-opener-closeicon-src: none;
+	--wui-selectpicker-viewicon-iconsize: 20px;
+	--wui-selectpicker-viewicon-icongap: 6px;
+	--wui-selectpicker-viewicon-iconcolor: #2d3a47;
+	--wui-selectpicker-viewinput-paddingleft: 10px;
+	--wui-selectpicker-viewinput-textcolor-out: #2d3a47;
+	--wui-selectpicker-viewinput-textcolor-over: #1f2937;
+	--wui-selectpicker-viewinput-textcolor-disabled: #d5dce3;
+	--wui-selectpicker-box-shadowcolor: #959da5;
+	--wui-selectpicker-box-shadowopacity: 20%;
+	--wui-selectpicker-box-width: 100%;
+	--wui-selectpicker-box-borderradius: 15px;
+	--wui-selectpicker-box-bordercolor: #f0f0f3;
+	--wui-selectpicker-box-bgcolor: #fdfdfe;
+	--wui-selectpicker-box-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-selectpicker-box-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+	--wui-selectpicker-box-option-borderradius: 10px;
+	--wui-selectpicker-box-option-bordercolor-out: #f0f0f3;
+	--wui-selectpicker-box-option-bordercolor-over: #f0f0f3;
+	--wui-selectpicker-box-option-bgcolor-out: transparent;
+	--wui-selectpicker-box-option-bgcolor-over: #f6f6f6;
+	--wui-selectpicker-box-option-iconsize: 24px;
+	--wui-selectpicker-box-option-iconcolor-out: #1e90ff;
+	--wui-selectpicker-box-option-iconcolor-over: #1e90ff;
+	--wui-selectpicker-box-option-iconcolor-selected: #1e90ff;
+	--wui-selectpicker-box-option-iconcolor-disabled: rgb(from #d5dce3 r g b / 40%);
+	--wui-selectpicker-box-option-checkicon-src: none;
+	--wui-selectpicker-box-option-textcolor-empty: rgb(from #2d3a47 r g b / 60%);
+	--wui-selectpicker-box-option-textcolor-out: #2d3a47;
+	--wui-selectpicker-box-option-textcolor-over: #2d3a47;
+	--wui-selectpicker-box-option-textcolor-selected: #1e90ff;
+	--wui-selectpicker-box-option-textcolor-disabled: rgb(from #d5dce3 r g b / 40%);
+	--wui-selectpicker-box-button-bordercolor: #f0f0f3;
+	--wui-selectpicker-box-button-textcolor-out: #1e90ff;
+	--wui-selectpicker-box-button-textcolor-over: #1e90ff;
+	--wui-selectpicker-mobile-overlay-bgcolor: rgb(from #010203 r g b / 20%);
+	--wui-selectpicker-mobile-box-width: 280px;
+	--wui-selectpicker-mobile-box-borderradius: 17px;
+
+	/* wui-datepicker */
+
+	--wui-datepicker-borderradius: 10px;
+	--wui-datepicker-borderwidth: 0px;
+	--wui-datepicker-bordercolor-out: transparent;
+	--wui-datepicker-bordercolor-over: transparent;
+	--wui-datepicker-bordercolor-disabled: transparent;
+	--wui-datepicker-bgcolor: #f6f6f6;
+	--wui-datepicker-opener-iconsize: 30px;
+	--wui-datepicker-opener-iconcolor-out: #000;
+	--wui-datepicker-opener-iconcolor-over: #1e90ff;
+	--wui-datepicker-opener-iconcolor-disabled: #d5dce3;
+	--wui-datepicker-opener-openicon-src: none;
+	--wui-datepicker-opener-closeicon-src: none;
+	--wui-datepicker-viewinput-paddingleft: 10px;
+	--wui-datepicker-viewinput-textcolor-out: #2d3a47;
+	--wui-datepicker-viewinput-textcolor-over: #1f2937;
+	--wui-datepicker-viewinput-textcolor-disabled: #d5dce3;
+	--wui-datepicker-box-shadowcolor: #959da5;
+	--wui-datepicker-box-shadowopacity: 20%;
+	--wui-datepicker-box-borderradius: 15px;
+	--wui-datepicker-box-bordercolor: #f0f0f3;
+	--wui-datepicker-box-bgcolor: rgb(from #fdfdfe r g b / 100%);
+	--wui-datepicker-box-period-iconsize: 20px;
+	--wui-datepicker-box-period-iconcolor-out: #000;
+	--wui-datepicker-box-period-iconcolor-over: #1e90ff;
+	--wui-datepicker-box-period-iconcolor-disabled: #d5dce3;
+	--wui-datepicker-box-period-upicon-src: none;
+	--wui-datepicker-box-period-downicon-src: none;
+	--wui-datepicker-box-paging-iconsize: 26px;
+	--wui-datepicker-box-paging-iconcolor-out: #1e90ff;
+	--wui-datepicker-box-paging-iconcolor-over: #1e90ff;
+	--wui-datepicker-box-paging-iconcolor-disabled: #d5dce3;
+	--wui-datepicker-box-paging-previcon-src: none;
+	--wui-datepicker-box-paging-nexticon-src: none;
+	--wui-datepicker-box-month-titlecolor: #888;
+	--wui-datepicker-box-month-bgcolor-today: #f0f0f3;
+	--wui-datepicker-box-month-bgcolor-over: rgb(from #1e90ff r g b / 20%);
+	--wui-datepicker-box-month-bgcolor-selected: #1e90ff;
+	--wui-datepicker-box-month-textcolor-out: #000;
+	--wui-datepicker-box-month-textcolor-over: #1e90ff;
+	--wui-datepicker-box-month-textcolor-selected: #fff;
+	--wui-datepicker-box-day-bgcolor-today: #f0f0f3;
+	--wui-datepicker-box-day-bgcolor-over: rgb(from #1e90ff r g b / 20%);
+	--wui-datepicker-box-day-bgcolor-selected: #1e90ff;
+	--wui-datepicker-box-day-textcolor-out: #000;
+	--wui-datepicker-box-day-textcolor-over: #1e90ff;
+	--wui-datepicker-box-day-textcolor-selected: #fff;
+	--wui-datepicker-box-button-textcolor-out: #1e90ff;
+	--wui-datepicker-box-button-textcolor-over: #1e90ff;
+	--wui-datepicker-mobile-overlay-bgcolor: rgb(from #010203 r g b / 20%);
+
+	/* wui-timepicker */
+
+	--wui-timepicker-borderradius: 10px;
+	--wui-timepicker-borderwidth: 0px;
+	--wui-timepicker-bordercolor-out: transparent;
+	--wui-timepicker-bordercolor-over: transparent;
+	--wui-timepicker-bordercolor-disabled: transparent;
+	--wui-timepicker-bgcolor: #f6f6f6;
+	--wui-timepicker-opener-iconsize: 30px;
+	--wui-timepicker-opener-iconcolor-out: #000;
+	--wui-timepicker-opener-iconcolor-over: #1e90ff;
+	--wui-timepicker-opener-iconcolor-disabled: #d5dce3;
+	--wui-timepicker-opener-openicon-src: none;
+	--wui-timepicker-opener-closeicon-src: none;
+	--wui-timepicker-viewinput-paddingleft: 10px;
+	--wui-timepicker-viewinput-textcolor-out: #2d3a47;
+	--wui-timepicker-viewinput-textcolor-over: #1f2937;
+	--wui-timepicker-viewinput-textcolor-disabled: #d5dce3;
+	--wui-timepicker-box-shadowcolor: #959da5;
+	--wui-timepicker-box-shadowopacity: 20%;
+	--wui-timepicker-box-borderradius: 15px;
+	--wui-timepicker-box-bordercolor: #f0f0f3;
+	--wui-timepicker-box-bgcolor: rgb(from #fff r g b / 80%);
+	--wui-timepicker-box-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-timepicker-box-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+	--wui-timepicker-box-option-bgcolor-now: #f0f0f3;
+	--wui-timepicker-box-option-bgcolor-over: rgb(from #1e90ff r g b / 20%);
+	--wui-timepicker-box-option-bgcolor-selected: #1e90ff;
+	--wui-timepicker-box-option-textcolor-out: #000;
+	--wui-timepicker-box-option-textcolor-over: #1e90ff;
+	--wui-timepicker-box-option-textcolor-selected: #fff;
+	--wui-timepicker-box-button-textcolor-out: #1e90ff;
+	--wui-timepicker-box-button-textcolor-over: #1e90ff;
+	--wui-timepicker-mobile-overlay-bgcolor: rgb(from #010203 r g b / 20%);
+
+	/* wui-colorpicker */
+
+	--wui-colorpicker-opener-iconsize: 30px;
+	--wui-colorpicker-opener-iconcolor-out: #000;
+	--wui-colorpicker-opener-iconcolor-over: #1e90ff;
+	--wui-colorpicker-opener-iconcolor-disabled: #d5dce3;
+	--wui-colorpicker-opener-openicon-src: none;
+	--wui-colorpicker-opener-closeicon-src: none;
+	--wui-colorpicker-viewbutton-size: 30px;
+	--wui-colorpicker-viewbutton-bordercolor-out: rgb(from #1e90ff r g b / 20%);
+	--wui-colorpicker-viewbutton-bordercolor-over: #1e90ff;
+	--wui-colorpicker-viewbutton-bordercolor-disabled: #d5dce3;
+	--wui-colorpicker-viewbutton-bgcolor-out: transparent;
+	--wui-colorpicker-viewbutton-bgcolor-over: transparent;
+	--wui-colorpicker-viewbutton-bgcolor-disabled: transparent;
+	--wui-colorpicker-viewcolor-borderwidth: 1px;
+	--wui-colorpicker-viewcolor-bordercolor: rgb(from #1e90ff r g b / 20%);
+	--wui-colorpicker-viewcolor-emptyicon-src: none;
+	--wui-colorpicker-box-shadowcolor: #959da5;
+	--wui-colorpicker-box-shadowopacity: 20%;
+	--wui-colorpicker-box-borderradius: 15px;
+	--wui-colorpicker-box-bordercolor: #f0f0f3;
+	--wui-colorpicker-box-bgcolor: rgb(from #fff r g b / 80%);
+	--wui-colorpicker-box-scroll-bgcolor-out: rgb(from #353a40 r g b / 20%);
+	--wui-colorpicker-box-scroll-bgcolor-over: rgb(from #353a40 r g b / 40%);
+	--wui-colorpicker-box-tab-textcolor-out: #2d3a47;
+	--wui-colorpicker-box-tab-textcolor-selected: #1e90ff;
+	--wui-colorpicker-box-option-bordercolor-out: #f0f0f3;
+	--wui-colorpicker-box-option-bordercolor-over: #f0f0f3;
+	--wui-colorpicker-box-option-bgcolor-out: transparent;
+	--wui-colorpicker-box-option-bgcolor-over: #f6f6f6;
+	--wui-colorpicker-box-option-bgcolor-selected: #1e90ff;
+	--wui-colorpicker-box-option-textcolor-out: #000;
+	--wui-colorpicker-box-option-textcolor-over: #1e90ff;
+	--wui-colorpicker-box-option-textcolor-selected: #fff;
+	--wui-colorpicker-box-preview-textcolor-out: #000;
+	--wui-colorpicker-box-preview-textcolor-empty: rgb(from #2d3a47 r g b / 60%);
+	--wui-colorpicker-box-button-textcolor-out: #1e90ff;
+	--wui-colorpicker-box-button-textcolor-over: #1e90ff;
+	--wui-colorpicker-mobile-overlay-bgcolor: rgb(from #010203 r g b / 20%);
+
+	/* wui-switch */
+
+	--wui-switch-button-size: 30px;
+	--wui-switch-bordercolor-out: rgb(from #1e90ff r g b / 20%);
+	--wui-switch-bordercolor-over: #1e90ff;
+	--wui-switch-bordercolor-activated: #1e90ff;
+	--wui-switch-bordercolor-disabled: #d5dce3;
+	--wui-switch-bgcolor-out: rgb(from #1e90ff r g b / 4%);
+	--wui-switch-bgcolor-over: rgb(from #1e90ff r g b / 4%);
+	--wui-switch-bgcolor-activated: #1e90ff;
+	--wui-switch-bgcolor-disabled: rgb(from #d5dce3 r g b / 20%);
+	--wui-switch-button-bordercolor-out: rgb(from #1e90ff r g b / 20%);
+	--wui-switch-button-bordercolor-over: #1e90ff;
+	--wui-switch-button-bordercolor-activated: #1e90ff;
+	--wui-switch-button-bordercolor-disabled: #d5dce3;
+	--wui-switch-button-bgcolor-out: #f6f6f6;
+	--wui-switch-button-bgcolor-over: rgb(from #1e90ff r g b / 4%);
+	--wui-switch-button-bgcolor-activated: #f6f6f6;
+	--wui-switch-button-bgcolor-disabled: #d5dce3;
+
+	/* wui-intensity */
+
+	--wui-intensity-height: 30px;
+	--wui-intensity-borderradius: 15px;
+	--wui-intensity-bordercolor-out: rgb(from #1e90ff r g b / 20%);
+	--wui-intensity-bordercolor-disabled: #d5dce3;
+	--wui-intensity-bgcolor-none: #f6f6f6;
+	--wui-intensity-bgcolor-low: mediumaquamarine;
+	--wui-intensity-bgcolor-half: darkorange;
+	--wui-intensity-bgcolor-high: orangered;
+
+	/* wui-button */
+
+	--wui-button-default-minwidth: 200px;
+	--wui-button-default-height: 34px;
+	--wui-button-default-borderwidth: 1px;
+	--wui-button-default-bordercolor-out: rgb(from #1e90ff r g b / 20%);
+	--wui-button-default-bordercolor-over: #1e90ff;
+	--wui-button-default-bordercolor-selected: #1e90ff;
+	--wui-button-default-bordercolor-disabled: #d5dce3;
+	--wui-button-default-bgcolor-out: transparent;
+	--wui-button-default-bgcolor-over: transparent;
+	--wui-button-default-bgcolor-selected: #1e90ff;
+	--wui-button-default-bgcolor-disabled: transparent;
+	--wui-button-default-horizpadding: 20px;
+	--wui-button-default-vertpadding: 0px;
+	--wui-button-default-textcolor-out: #1e90ff;
+	--wui-button-default-textcolor-over: #1e90ff;
+	--wui-button-default-textcolor-selected: #fff;
+	--wui-button-default-textcolor-disabled: #d5dce3;
+	--wui-button-default-textsize: 15px;
+	--wui-button-submit-minwidth: 200px;
+	--wui-button-submit-height: 34px;
+	--wui-button-submit-bordercolor-out: rgb(from #1e90ff r g b / 20%);
+	--wui-button-submit-bordercolor-over: #1e90ff;
+	--wui-button-submit-bordercolor-selected: #1e90ff;
+	--wui-button-submit-bordercolor-disabled: #d5dce3;
+	--wui-button-submit-bgcolor-out: #1e90ff;
+	--wui-button-submit-bgcolor-over: #1e90ff;
+	--wui-button-submit-bgcolor-selected: #1e90ff;
+	--wui-button-submit-bgcolor-disabled: #d5dce3;
+	--wui-button-submit-textcolor-out: #fff;
+	--wui-button-submit-textcolor-over: #fff;
+	--wui-button-submit-textcolor-selected: #fff;
+	--wui-button-submit-textcolor-disabled: #d5dce3;
+	--wui-button-submit-textsize: 15px;
+	--wui-button-warning-bordercolor-out: rgb(from #f44343 r g b / 25%);
+	--wui-button-warning-bordercolor-over: #f44343;
+	--wui-button-warning-bordercolor-selected: #f44343;
+	--wui-button-warning-bordercolor-disabled: #d5dce3;
+	--wui-button-warning-bgcolor-out: #f44343;
+	--wui-button-warning-bgcolor-over: #f44343;
+	--wui-button-warning-bgcolor-selected: #f44343;
+	--wui-button-warning-bgcolor-disabled: #d5dce3;
+	--wui-button-warning-textcolor-out: #fff;
+	--wui-button-warning-textcolor-over: #fff;
+	--wui-button-warning-textcolor-selected: #fff;
+	--wui-button-warning-textcolor-disabled: #d5dce3;
+	--wui-button-icon-float-padding: 5px;
+	--wui-button-mobile-default-minwidth: 40px;
+	--wui-button-mobile-default-height: 40px;
+	--wui-button-mobile-submit-height: 40px;
+	--wui-button-mobile-icon-float-padding: 10px;
+
+	/* wui-codebox (lab) */
+
+	--wui-codebox-maxheight: 50vh;
+	--wui-codebox-borderradius: 5px;
+	--wui-codebox-bordercolor: #d5dce3;
+	--wui-codebox-bgcolor: #f6f6f6;
+	--wui-codebox-scroll-width: 4px;
+	--wui-codebox-scroll-bgcolor-out: #b5bbc1;
+	--wui-codebox-scroll-bgcolor-over: #959da5;
+	--wui-codebox-copyicon-src: none;
+	--wui-codebox-copyicon-color: #b5bbc1;
+	--wui-codebox-copiedicon-src: none;
+	--wui-codebox-copiedicon-color: #b5bbc1;
+	--wui-codebox-line-bgcolor-over: #d5dce3;
+	--wui-codebox-linenumber-width: 52px;
+	--wui-codebox-linenumber-color: #444;
+	--wui-codebox-linenumber-bordercolor: #d5dce3;
+	--wui-codebox-textcolor: #2d3a47;
+	--wui-codebox-token-command: mediumaquamarine;
+	--wui-codebox-token-comment: #6a737d;
+	--wui-codebox-token-string: #032f62;
+	--wui-codebox-token-keyword: #d73a49;
+	--wui-codebox-token-number: #005cc5;
+	--wui-codebox-token-tag: #22863a;
+	--wui-codebox-token-attr: #6f42c1;
+	--wui-codebox-token-selector: #6f42c1;
+	--wui-codebox-token-property: #005cc5;
+	--wui-codebox-token-function: #6f42c1;
+	--wui-codebox-token-operator: #24292e;
+	--wui-codebox-token-variable: #e36209;
+	--wui-codebox-token-constant: #005cc5;
+	--wui-codebox-token-decorator: #6f42c1;
+	--wui-codebox-token-type: #6f42c1;
+	--wui-codebox-token-builtin: #005cc5;
+	--wui-codebox-token-color: #005cc5;
+	--wui-codebox-token-regex: #032f62;
+
+	/* wui-markdown (lab) */
+
+	--wui-markdown-hr-width: 1px;
+	--wui-markdown-hr-color: #d5dce3;
+	--wui-markdown-table-valign: center;
+	--wui-markdown-table-borderradius: 5px;
+	--wui-markdown-table-bordercolor: #d5dce3;
+	--wui-markdown-table-scroll-width: 4px;
+	--wui-markdown-table-scroll-bgcolor-out: #ccc;
+	--wui-markdown-table-scroll-bgcolor-over: #888;
+	--wui-markdown-table-header-bordercolor: #ccc;
+	--wui-markdown-table-header-textalign: left;
+	--wui-markdown-table-rows-bordercolor: #d5dce3;
+	--wui-markdown-table-rows-bgcolor-even: #f6f6f6;
+	--wui-markdown-table-rows-bgcolor-over: #efeff6;
+	--wui-markdown-blockquote-iconsize: 16px;
+	--wui-markdown-blockquote-radius: 0px;
+	--wui-markdown-blockquote-border: 0px;
+	--wui-markdown-blockquote-borderleft: 3px;
+	--wui-markdown-blockquote-bordercolor: transparent;
+	--wui-markdown-blockquote-padding: 10px;
+	--wui-markdown-blockquote-note-altcolor: #1e90ff;
+	--wui-markdown-blockquote-noteicon-src: none;
+	--wui-markdown-blockquote-tip-altcolor: mediumaquamarine;
+	--wui-markdown-blockquote-tipicon-src: none;
+	--wui-markdown-blockquote-important-altcolor: blueviolet;
+	--wui-markdown-blockquote-importanticon-src: none;
+	--wui-markdown-blockquote-warning-altcolor: darkorange;
+	--wui-markdown-blockquote-warningicon-src: none;
+	--wui-markdown-blockquote-caution-altcolor: orangered;
+	--wui-markdown-blockquote-cautionicon-src: none;
+	--wui-markdown-code-borderradius: 5px;
+	--wui-markdown-code-bordercolor: #d5dce3;
+	--wui-markdown-code-bgcolor: #f0f0f3;
+	--wui-markdown-pre-maxheight: 50vh;
+	--wui-markdown-pre-borderradius: 5px;
+	--wui-markdown-pre-bordercolor: #d5dce3;
+	--wui-markdown-pre-bgcolor: #f6f6f6;
+	--wui-markdown-pre-scroll-width: 4px;
+	--wui-markdown-pre-scroll-bgcolor-out: #b5bbc1;
+	--wui-markdown-pre-scroll-bgcolor-over: #959da5;
+	--wui-markdown-pre-textcolor: #2d3a47;
+	--wui-markdown-link-textcolor-out: #1e90ff;
+	--wui-markdown-link-textcolor-hover: #1e90ff;
+	--wui-markdown-link-textdecoration-out: none;
+	--wui-markdown-link-textdecoration-hover: underline;
+
+	/* wuiplugin-selector */
+
+	--wuiplugin-selector-box-width: 280px;
+	--wuiplugin-selector-box-bgcolor: #fdfdfe;
+	--wuiplugin-selector-option-bordercolor-out: #f0f0f3;
+	--wuiplugin-selector-option-bordercolor-over: #f0f0f3;
+	--wuiplugin-selector-option-bgcolor-out: transparent;
+	--wuiplugin-selector-option-bgcolor-over: #f6f6f6;
+	--wuiplugin-selector-option-iconcolor-out: #1e90ff;
+	--wuiplugin-selector-option-iconcolor-over: #1e90ff;
+	--wuiplugin-selector-option-iconcolor-disabled: #d5dce3;
+	--wuiplugin-selector-option-textcolor-out: #2d3a47;
+	--wuiplugin-selector-option-textcolor-over: #1e90ff;
+	--wuiplugin-selector-option-textcolor-selected: #1e90ff;
+	--wuiplugin-selector-option-textcolor-disabled: #d5dce3;
+	--wuiplugin-selector-option-checker-bordercolor-out: #1e90ff;
+	--wuiplugin-selector-option-checker-bordercolor-selected: #1e90ff;
+	--wuiplugin-selector-option-checker-bgcolor-out: transparent;
+	--wuiplugin-selector-option-checker-bgcolor-selected: #1e90ff;
+	--wuiplugin-selector-button-bordercolor: #f0f0f3;
+}

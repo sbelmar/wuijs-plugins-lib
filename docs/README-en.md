@@ -14,9 +14,9 @@
 |                      | |
 | -------------------- | --- |
 | **Library name**     | `wuijs-plugins-lib` |
-| **Library version**  | `0.7.0` ([Change Log](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-en.md)) |
+| **Library version**  | `0.7.1` ([Change Log](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-en.md)) |
 | **NPM package**      | `@wui-js/plugins` ([npm](https://www.npmjs.com/package/@wui-js/plugins)) |
-| **Document version** | `0.7.0.20260514.0` |
+| **Document version** | `0.7.1.20260516.0` |
 | **License**          | `Apache License 2.0` |
 | **Author**           | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repository**       | [https://github.com/wui-js/wuijs-plugins-lib](https://github.com/wui-js/wuijs-plugins-lib) |
@@ -55,7 +55,7 @@ WUI/JS Plugins Lib is part of the WUI/JS project, which currently consists of 4 
 
 | Plugin Name                              | Version | Description |
 | ---------------------------------------- | -------:| ----------- |
-| [WUIPluginThemes](#wuiplugin-themes)     | `0.6`   | Plugin for managing pre-designed themes and light and dark modes. |
+| [WUIPluginThemes](#wuiplugin-themes)     | `0.7`   | Plugin for managing pre-designed themes and light and dark modes. |
 | [WUIPluginSelector](#wuiplugin-selector) | `0.4`   | Modal selector based on WUIModal. |
 
 ### Directory Map
@@ -130,7 +130,7 @@ The resources will be available in the `./node_modules/@wui-js/plugins` director
 
 ### WUIPluginThemes
 
-Version: `0.6`
+Version: `0.7`
 
 Plugin for managing pre-designed themes and light and dark modes.
 
@@ -169,11 +169,11 @@ It also provides theme support for the `wuiplugin-selector` plugin.
 
 | Type | File |
 | ---- | ---- |
-| CSS  | [src/wui-js/plugins/themes/wuiplugin-themes-0.6.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/wuiplugin-themes-0.6.css) |
-| JS   | [src/wui-js/plugins/themes/wuiplugin-themes-0.6.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/wuiplugin-themes-0.6.js) |
-| CSS  | [src/wui-js/plugins/themes/default/settings-0.6.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/settings-0.6.css) |
-| CSS  | [src/wui-js/plugins/themes/default/light-0.6.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/light-0.6.css) |
-| CSS  | [src/wui-js/plugins/themes/default/dark-0.6.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/dark-0.6.css) |
+| CSS  | [src/wui-js/plugins/themes/wuiplugin-themes-0.7.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/wuiplugin-themes-0.7.css) |
+| JS   | [src/wui-js/plugins/themes/wuiplugin-themes-0.7.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/wuiplugin-themes-0.7.js) |
+| CSS  | [src/wui-js/plugins/themes/default/settings-0.7.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/settings-0.7.css) |
+| CSS  | [src/wui-js/plugins/themes/default/light-0.7.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/light-0.7.css) |
+| CSS  | [src/wui-js/plugins/themes/default/dark-0.7.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/dark-0.7.css) |
 
 #### Constructor
 
@@ -266,7 +266,7 @@ Recommended if dynamic switching between light and dark modes is not required.
 HTML head:
 
 ```html
-<link rel="stylesheet" href="./libraries/wui-js/plugins/themes/default/light-0.6.css">
+<link rel="stylesheet" href="./libraries/wui-js/plugins/themes/default/light-0.7.css">
 ```
 
 HTML code:
@@ -277,7 +277,7 @@ HTML code:
 
 **Using JS class instantiation:**
 
-It requires the implementation of the JS class `WUIPluginThemes`, the source CSS file `wuiplugin-themes-0.6.css` and the theme settings CSS file `wui-js/plugins/themes/{name}/settings-{version}.css`.
+It requires the implementation of the JS class `WUIPluginThemes`, the source CSS file `wuiplugin-themes-0.7.css` and the theme settings CSS file `wui-js/plugins/themes/{name}/settings-{version}.css`.
 Additionally, the viewer where it is displayed must support the CSS function `light-dark()` [https://www.w3schools.com/cssref/func_light-dark.php](https://www.w3schools.com/cssref/func_light-dark.php)
 
 CSS code:
@@ -303,10 +303,10 @@ HTML head:
 ```html
 <link rel="stylesheet" href="./libraries/wui-js/main/switch/wui-switch-0.6.root.css">
 <link rel="stylesheet" href="./libraries/wui-js/main/switch/wui-switch-0.6.css">
-<link rel="stylesheet" href="./libraries/wui-js/plugins/themes/wuiplugin-themes-0.6.css">
-<link rel="stylesheet" href="./libraries/wui-js/plugins/themes/default/settings-0.6.css">
+<link rel="stylesheet" href="./libraries/wui-js/plugins/themes/wuiplugin-themes-0.7.css">
+<link rel="stylesheet" href="./libraries/wui-js/plugins/themes/default/settings-0.7.css">
 <script type="text/javascript" src="./libraries/wui-js/main/switch/wui-switch-0.6.js"></script>
-<script type="text/javascript" src="./libraries/wui-js/plugins/themes/wuiplugin-themes-0.6.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/plugins/themes/wuiplugin-themes-0.7.js"></script>
 ```
 
 HTML code:
@@ -355,7 +355,7 @@ python ./clone-theme.py -d <themes-directory> -s <source-theme> -n <new-theme-na
 
 | Option                 | Default value                                           | Description |
 | ---------------------- | ------------------------------------------------------- | ----------- |
-| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/themes/wuiplugin-themes-0.6.css` | Path to the themes plugin CSS source file. |
+| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/themes/wuiplugin-themes-0.7.css` | Path to the themes plugin CSS source file. |
 | `-d`,<br>`--directory` | `../src/wui-js/plugins/themes`                          | Themes base directory. |
 | `-s`,<br>`--source`    | `default`                                               | Name of the theme to clone. |
 | `-n`,<br>`--name`      | _(required)_                                            | Name of the new theme. |
@@ -375,7 +375,7 @@ python ./css-theme-maker.py -p <plugin-css-path> -d <themes-directory> -n <theme
 
 | Option                 | Default value                                           | Description |
 | ---------------------- | ------------------------------------------------------- | ----------- |
-| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/themes/wuiplugin-themes-0.6.css` | Path to the themes plugin CSS source file. |
+| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/themes/wuiplugin-themes-0.7.css` | Path to the themes plugin CSS source file. |
 | `-d`,<br>`--directory` | `../src/wui-js/plugins/themes`                          | Themes base directory. |
 | `-n`,<br>`--name`      | `default`                                               | Theme name. |
 | `-v`,<br>`--version`   | `0.6`                                                   | Theme version. |

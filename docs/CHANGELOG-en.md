@@ -7,6 +7,14 @@
 
 # Change Log
 
+## [v0.7.1] - 2026-05-16
+
+Features:
+
+1. Synchronized with `wuijs-main-lib` version `0.7.1`.
+2. WUIPluginThemes version class update to `0.7`.
+	- Updated `wuiplugin-themes-0.7.css` file with default CSS variable values for the `wui-menubar`, `wui-selectpicker`, `wui-datepicker` and `wui-timepicker` components.
+
 ## [v0.7.0] - 2026-05-14
 
 Features:

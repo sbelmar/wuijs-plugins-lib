@@ -1,6 +1,6 @@
 {
 	"name": "@wui-js/plugins",
-	"version": "0.7.0",
+	"version": "0.7.1",
 	"license": "Apache-2.0",
 	"author": "Sergio E. Belmar V. <wuijs.project@gmail.com>",
 	"description": "WUI/JS Plugins Lib - WUI/JS Plugins Lib is an open-source JavaScript/CSS library that provides a collection of plugins for WUI/JS Main Lib classes.",

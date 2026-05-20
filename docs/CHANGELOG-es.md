@@ -7,6 +7,14 @@
 
 # Registro de Cambios
 
+## [v0.7.1] - 2026-05-16
+
+Características:
+
+1. Se sincronizó la versión con la versión `0.7.1` de la librería `wuijs-main-lib`
+2. Se actualizó versión clase WUIPluginThemes a `0.7`.
+	- Se actualizó el archivo `wuiplugin-themes-0.7.css` con los valores por defecto de las variables CSS de los componentes `wui-menubar`, `wui-selectpicker`, `wui-datepicker` y `wui-timepicker`.
+
 ## [v0.7.0] - 2026-05-14
 
 Características:
