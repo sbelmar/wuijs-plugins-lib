@@ -7,6 +7,14 @@
 
 # Registro de Cambios
 
+## [v0.8.0] - 2026-05-26
+
+Características:
+
+1. Se sincronizó la versión con la versión `0.8.0` de la librería `wuijs-main-lib`
+2. Se actualizó versión clase WUIPluginThemes a `0.8`.
+	- Se actualizó el archivo `wuiplugin-themes-0.8.css` con la actualiación de los valores de las variables CSS de tipo `scroll`.
+
 ## [v0.7.1] - 2026-05-16
 
 Características:

@@ -14,9 +14,9 @@
 |                      | |
 | -------------------- | --- |
 | **Library name**     | `wuijs-plugins-lib` |
-| **Library version**  | `0.7.1` ([Change Log](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-en.md)) |
+| **Library version**  | `0.8.0` ([Change Log](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-en.md)) |
 | **NPM package**      | `@wui-js/plugins` ([npm](https://www.npmjs.com/package/@wui-js/plugins)) |
-| **Document version** | `0.7.1.20260516.0` |
+| **Document version** | `0.8.0.20260526.0` |
 | **License**          | `Apache License 2.0` |
 | **Author**           | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repository**       | [https://github.com/wui-js/wuijs-plugins-lib](https://github.com/wui-js/wuijs-plugins-lib) |
@@ -55,7 +55,7 @@ WUI/JS Plugins Lib is part of the WUI/JS project, which currently consists of 4 
 
 | Plugin Name                              | Version | Description |
 | ---------------------------------------- | -------:| ----------- |
-| [WUIPluginThemes](#wuiplugin-themes)     | `0.7`   | Plugin for managing pre-designed themes and light and dark modes. |
+| [WUIPluginThemes](#wuiplugin-themes)     | `0.8`   | Plugin for managing pre-designed themes and light and dark modes. |
 | [WUIPluginSelector](#wuiplugin-selector) | `0.4`   | Modal selector based on WUIModal. |
 
 ### Directory Map
@@ -130,7 +130,7 @@ The resources will be available in the `./node_modules/@wui-js/plugins` director
 
 ### WUIPluginThemes
 
-Version: `0.7`
+Version: `0.8`
 
 Plugin for managing pre-designed themes and light and dark modes.
 
@@ -169,8 +169,8 @@ It also provides theme support for the `wuiplugin-selector` plugin.
 
 | Type | File |
 | ---- | ---- |
-| CSS  | [src/wui-js/plugins/themes/wuiplugin-themes-0.7.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/wuiplugin-themes-0.7.css) |
-| JS   | [src/wui-js/plugins/themes/wuiplugin-themes-0.7.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/wuiplugin-themes-0.7.js) |
+| CSS  | [src/wui-js/plugins/themes/wuiplugin-themes-0.8.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/wuiplugin-themes-0.8.css) |
+| JS   | [src/wui-js/plugins/themes/wuiplugin-themes-0.8.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/wuiplugin-themes-0.8.js) |
 | CSS  | [src/wui-js/plugins/themes/default/settings-0.7.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/settings-0.7.css) |
 | CSS  | [src/wui-js/plugins/themes/default/light-0.7.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/light-0.7.css) |
 | CSS  | [src/wui-js/plugins/themes/default/dark-0.7.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/dark-0.7.css) |
@@ -277,7 +277,7 @@ HTML code:
 
 **Using JS class instantiation:**
 
-It requires the implementation of the JS class `WUIPluginThemes`, the source CSS file `wuiplugin-themes-0.7.css` and the theme settings CSS file `wui-js/plugins/themes/{name}/settings-{version}.css`.
+It requires the implementation of the JS class `WUIPluginThemes`, the source CSS file `wuiplugin-themes-0.8.css` and the theme settings CSS file `wui-js/plugins/themes/{name}/settings-{version}.css`.
 Additionally, the viewer where it is displayed must support the CSS function `light-dark()` [https://www.w3schools.com/cssref/func_light-dark.php](https://www.w3schools.com/cssref/func_light-dark.php)
 
 CSS code:
@@ -303,10 +303,10 @@ HTML head:
 ```html
 <link rel="stylesheet" href="./libraries/wui-js/main/switch/wui-switch-0.6.root.css">
 <link rel="stylesheet" href="./libraries/wui-js/main/switch/wui-switch-0.6.css">
-<link rel="stylesheet" href="./libraries/wui-js/plugins/themes/wuiplugin-themes-0.7.css">
+<link rel="stylesheet" href="./libraries/wui-js/plugins/themes/wuiplugin-themes-0.8.css">
 <link rel="stylesheet" href="./libraries/wui-js/plugins/themes/default/settings-0.7.css">
 <script type="text/javascript" src="./libraries/wui-js/main/switch/wui-switch-0.6.js"></script>
-<script type="text/javascript" src="./libraries/wui-js/plugins/themes/wuiplugin-themes-0.7.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/plugins/themes/wuiplugin-themes-0.8.js"></script>
 ```
 
 HTML code:
@@ -355,7 +355,7 @@ python ./clone-theme.py -d <themes-directory> -s <source-theme> -n <new-theme-na
 
 | Option                 | Default value                                           | Description |
 | ---------------------- | ------------------------------------------------------- | ----------- |
-| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/themes/wuiplugin-themes-0.7.css` | Path to the themes plugin CSS source file. |
+| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/themes/wuiplugin-themes-0.8.css` | Path to the themes plugin CSS source file. |
 | `-d`,<br>`--directory` | `../src/wui-js/plugins/themes`                          | Themes base directory. |
 | `-s`,<br>`--source`    | `default`                                               | Name of the theme to clone. |
 | `-n`,<br>`--name`      | _(required)_                                            | Name of the new theme. |
@@ -375,10 +375,10 @@ python ./css-theme-maker.py -p <plugin-css-path> -d <themes-directory> -n <theme
 
 | Option                 | Default value                                           | Description |
 | ---------------------- | ------------------------------------------------------- | ----------- |
-| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/themes/wuiplugin-themes-0.7.css` | Path to the themes plugin CSS source file. |
+| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/themes/wuiplugin-themes-0.8.css` | Path to the themes plugin CSS source file. |
 | `-d`,<br>`--directory` | `../src/wui-js/plugins/themes`                          | Themes base directory. |
 | `-n`,<br>`--name`      | `default`                                               | Theme name. |
-| `-v`,<br>`--version`   | `0.6`                                                   | Theme version. |
+| `-v`,<br>`--version`   | `0.8`                                                   | Theme version. |
 
 Output files are generated in `{directory}/{name}/` with the names `light-{version}.css` and `dark-{version}.css`.
 
@@ -480,7 +480,7 @@ Modify `src/wui-js/plugins/themes/my-theme/settings-0.1.css` with the desired va
 	--wuiplugin-theme-bgcolor-box-dark: #2f3a48;
 	--wuiplugin-theme-bgcolor-out-dark: #1f2937;
 	--wuiplugin-theme-bgcolor-over-dark: #374151;
-	--wuiplugin-theme-bgcolor-scroll-dark: #4b5563;
+	--wuiplugin-theme-bgcolor-scroll-dark: #9fa8b6;
 	--wuiplugin-theme-bgcolor-icon-dark: #d1d5db;
 	--wuiplugin-theme-bgcolor-highcontrast-dark: #f9fafb;
 	--wuiplugin-theme-textcolor-title-dark: #fff;
@@ -538,8 +538,8 @@ It can also be used programmatically, independently of a native input `<select>`
 
 | Class       | Version | Description |
 | ----------- | :-----: | ----------- |
-| `WUIIcon`   | `0.4`   | Required for the selected option checkmark icon. |
-| `WUIModal`  | `0.5`   | Base modal class. Required. |
+| `WUIIcon`   | `0.5`   | Required for the selected option checkmark icon. |
+| `WUIModal`  | `0.6`   | Base modal class. Required. |
 | `WUIButton` | `0.7`   | Used internally for the accept and cancel buttons. Required. |
 
 #### Sources
@@ -654,16 +654,16 @@ The container element must be a `<div>` with the class `wui-modal wuiplugin-sele
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/icon/wui-icon-0.4.root.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui/icon/wui-icon-0.4.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui/modal/wui-modal-0.5.root.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui/modal/wui-modal-0.5.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui/icon/wui-icon-0.5.root.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui/icon/wui-icon-0.5.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui/modal/wui-modal-0.6.root.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui/modal/wui-modal-0.6.css">
 <link type="text/css" rel="stylesheet" href="./libraries/wui/button/wui-button-0.7.root.css">
 <link type="text/css" rel="stylesheet" href="./libraries/wui/button/wui-button-0.7.css">
 <link type="text/css" rel="stylesheet" href="./libraries/wuiplugin/selector/wuiplugin-selector-0.4.root.css">
 <link type="text/css" rel="stylesheet" href="./libraries/wuiplugin/selector/wuiplugin-selector-0.4.css">
-<script type="text/javascript" src="./libraries/wui/icon/wui-icon-0.4.js"></script>
-<script type="text/javascript" src="./libraries/wui/modal/wui-modal-0.5.js"></script>
+<script type="text/javascript" src="./libraries/wui/icon/wui-icon-0.5.js"></script>
+<script type="text/javascript" src="./libraries/wui/modal/wui-modal-0.6.js"></script>
 <script type="text/javascript" src="./libraries/wui/button/wui-button-0.7.js"></script>
 <script type="text/javascript" src="./libraries/wuiplugin/selector/wuiplugin-selector-0.4.js"></script>
 ```

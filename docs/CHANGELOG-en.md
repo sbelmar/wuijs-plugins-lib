@@ -7,6 +7,14 @@
 
 # Change Log
 
+## [v0.8.0] - 2026-05-26
+
+Features:
+
+1. Synchronized with `wuijs-main-lib` version `0.8.0`.
+2. WUIPluginThemes version class update to `0.8`.
+	- Updated `wuiplugin-themes-0.8.css` file with the update of the default values of the CSS variables of type `scroll`.
+
 ## [v0.7.1] - 2026-05-16
 
 Features:

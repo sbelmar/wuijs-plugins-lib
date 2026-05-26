@@ -3,7 +3,7 @@ import re
 import argparse
 
 # Default arguments
-default_source_path = "../src/wui-js/plugins/themes/wuiplugin-themes-0.6.css"
+default_source_path = "../src/wui-js/plugins/themes/wuiplugin-themes-0.8.css"
 default_themes_dir  = "../src/wui-js/plugins/themes"
 default_source      = "default"
 default_version     = "0.1"
