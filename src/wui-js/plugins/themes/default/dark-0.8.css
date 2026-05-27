@@ -640,7 +640,7 @@
 	--wui-markdown-hline-width: 1px;
 	--wui-markdown-hline-color: #4b5563;
 	--wui-markdown-table-valign: center;
-	--wui-markdown-table-borderradius: 5px;
+	--wui-markdown-table-borderradius: 10px;
 	--wui-markdown-table-bordercolor: #4b5563;
 	--wui-markdown-table-scroll-width: 4px;
 	--wui-markdown-table-scroll-bgcolor-out: rgb(from #9fa8b6 r g b / 40%);
@@ -657,6 +657,7 @@
 	--wui-markdown-blockquote-bordercolor: transparent;
 	--wui-markdown-blockquote-bgcolor: transparent;
 	--wui-markdown-blockquote-padding: 10px;
+	--wui-markdown-blockquote-default-altcolor: #4b5563;
 	--wui-markdown-blockquote-note-altcolor: #1e90ff;
 	--wui-markdown-blockquote-noteicon-src: none;
 	--wui-markdown-blockquote-tip-altcolor: mediumaquamarine;

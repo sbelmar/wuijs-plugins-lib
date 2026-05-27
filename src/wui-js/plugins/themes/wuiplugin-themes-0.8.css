@@ -638,7 +638,7 @@
 	--wui-markdown-hline-width: 1px;
 	--wui-markdown-hline-color: var(--wuiplugin-theme-bordercolor-high);
 	--wui-markdown-table-valign: center;
-	--wui-markdown-table-borderradius: 5px;
+	--wui-markdown-table-borderradius: 10px;
 	--wui-markdown-table-bordercolor: var(--wuiplugin-theme-bordercolor-high);
 	--wui-markdown-table-scroll-width: 4px;
 	--wui-markdown-table-scroll-bgcolor-out: rgb(from var(--wuiplugin-theme-bgcolor-scroll) r g b / 40%);
@@ -655,6 +655,7 @@
 	--wui-markdown-blockquote-bordercolor: transparent;
 	--wui-markdown-blockquote-bgcolor: transparent;
 	--wui-markdown-blockquote-padding: 10px;
+	--wui-markdown-blockquote-default-altcolor: var(--wuiplugin-theme-bordercolor-high);
 	--wui-markdown-blockquote-note-altcolor: var(--wuiplugin-theme-utilitycolor-hightlight);
 	--wui-markdown-blockquote-noteicon-src: none;
 	--wui-markdown-blockquote-tip-altcolor: var(--wuiplugin-theme-intencitycolor-low);

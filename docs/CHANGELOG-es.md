@@ -7,11 +7,17 @@
 
 # Registro de Cambios
 
+## [v0.8.1] - 2026-05-28
+
+Características:
+
+1. Se sincronizó la versión con la versión `0.8.0` de la librería `wuijs-main-lib`.
+
 ## [v0.8.0] - 2026-05-26
 
 Características:
 
-1. Se sincronizó la versión con la versión `0.8.0` de la librería `wuijs-main-lib`
+1. Se sincronizó la versión con la versión `0.8.0` de la librería `wuijs-main-lib`.
 2. Se actualizó versión clase WUIPluginThemes a `0.8`.
 	- Se actualizó el archivo `wuiplugin-themes-0.8.css` con la actualiación de los valores de las variables CSS de tipo `scroll`.
 
@@ -19,7 +25,7 @@ Características:
 
 Características:
 
-1. Se sincronizó la versión con la versión `0.7.1` de la librería `wuijs-main-lib`
+1. Se sincronizó la versión con la versión `0.7.1` de la librería `wuijs-main-lib`.
 2. Se actualizó versión clase WUIPluginThemes a `0.7`.
 	- Se actualizó el archivo `wuiplugin-themes-0.7.css` con los valores por defecto de las variables CSS de los componentes `wui-menubar`, `wui-selectpicker`, `wui-datepicker` y `wui-timepicker`.
 
@@ -27,13 +33,13 @@ Características:
 
 Características:
 
-1. Se sincronizó la versión con la versión `0.7.0` de la librería `wuijs-main-lib`
+1. Se sincronizó la versión con la versión `0.7.0` de la librería `wuijs-main-lib`.
 2. Se actualizó versión clase WUIPluginSelector a `0.4`.
 	- Se agregó archivo `.root.css` con los valores por defecto de las variables CSS.
 
 ## [v0.6.2] - 2026-05-08
 
-1. Se sincronizó la versión con la versión `0.6.2` de la librería `wuijs-main-lib`
+1. Se sincronizó la versión con la versión `0.6.2` de la librería `wuijs-main-lib`.
 
 Características:
 
@@ -41,7 +47,7 @@ Características:
 
 Características:
 
-1. Se sincronizó la versión con la versión `0.6.1` de la librería `wuijs-main-lib`
+1. Se sincronizó la versión con la versión `0.6.1` de la librería `wuijs-main-lib`.
 2. Liberación del sitio oficial de documentación de WUI/JS: [https://docs.wuijs.dev](https://docs.wuijs.dev)
 3. Se actualizó versión clase WUIPluginThemes a `0.6`.
 	- Se agregó la variable CSS asociadas al componente `wui-codebox` (paquete lab).
@@ -52,7 +58,7 @@ Características:
 
 Características:
 
-1. Se sincronizó la versión con la versión `0.6.0` de la librería `wuijs-main-lib`
+1. Se sincronizó la versión con la versión `0.6.0` de la librería `wuijs-main-lib`.
 2. Se actualizó versión clase WUIPluginThemes a `0.5`.
 	- Se agregó la variable CSS `--wui-table-width`.
 	- Se agregó la variable CSS `--wui-table-column-bordercolor-disabled`.
