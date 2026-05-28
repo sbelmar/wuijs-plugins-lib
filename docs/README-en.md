@@ -14,9 +14,9 @@
 |                      | |
 | -------------------- | --- |
 | **Library name**     | `wuijs-plugins-lib` |
-| **Library version**  | `0.8.1` ([Change Log](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-en.md)) |
+| **Library version**  | `0.9.0` ([Change Log](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-en.md)) |
 | **NPM package**      | `@wui-js/plugins` ([npm](https://www.npmjs.com/package/@wui-js/plugins)) |
-| **Document version** | `0.8.1.20260528.0` |
+| **Document version** | `0.9.0.20260528.0` |
 | **License**          | `Apache License 2.0` |
 | **Author**           | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repository**       | [https://github.com/wui-js/wuijs-plugins-lib](https://github.com/wui-js/wuijs-plugins-lib) |
@@ -171,9 +171,9 @@ It also provides theme support for the `wuiplugin-selector` plugin.
 | ---- | ---- |
 | CSS  | [src/wui-js/plugins/themes/wuiplugin-themes-0.8.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/wuiplugin-themes-0.8.css) |
 | JS   | [src/wui-js/plugins/themes/wuiplugin-themes-0.8.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/wuiplugin-themes-0.8.js) |
-| CSS  | [src/wui-js/plugins/themes/default/settings-0.7.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/settings-0.7.css) |
-| CSS  | [src/wui-js/plugins/themes/default/light-0.7.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/light-0.7.css) |
-| CSS  | [src/wui-js/plugins/themes/default/dark-0.7.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/dark-0.7.css) |
+| CSS  | [src/wui-js/plugins/themes/default/settings-0.8.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/settings-0.8.css) |
+| CSS  | [src/wui-js/plugins/themes/default/light-0.8.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/light-0.8.css) |
+| CSS  | [src/wui-js/plugins/themes/default/dark-0.8.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/dark-0.8.css) |
 
 #### Constructor
 
@@ -266,7 +266,7 @@ Recommended if dynamic switching between light and dark modes is not required.
 HTML head:
 
 ```html
-<link rel="stylesheet" href="./libraries/wui-js/plugins/themes/default/light-0.7.css">
+<link rel="stylesheet" href="./libraries/wui-js/plugins/themes/default/light-0.8.css">
 ```
 
 HTML code:
@@ -301,13 +301,15 @@ nav {
 HTML head:
 
 ```html
-<link rel="stylesheet" href="./libraries/wui-js/main/switch/wui-switch-0.6.root.css">
 <link rel="stylesheet" href="./libraries/wui-js/main/switch/wui-switch-0.6.css">
 <link rel="stylesheet" href="./libraries/wui-js/plugins/themes/wuiplugin-themes-0.8.css">
-<link rel="stylesheet" href="./libraries/wui-js/plugins/themes/default/settings-0.7.css">
+<link rel="stylesheet" href="./libraries/wui-js/plugins/themes/default/settings-0.8.css">
 <script type="text/javascript" src="./libraries/wui-js/main/switch/wui-switch-0.6.js"></script>
 <script type="text/javascript" src="./libraries/wui-js/plugins/themes/wuiplugin-themes-0.8.js"></script>
 ```
+
+> [!TIP]
+> When using the plugin, it is not necessary to load the `.root.css` files of the components.
 
 HTML code:
 

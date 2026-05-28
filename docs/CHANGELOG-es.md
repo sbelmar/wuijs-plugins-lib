@@ -7,11 +7,20 @@
 
 # Registro de Cambios
 
+## [v0.9.9] - 2026-05-28
+
+Características:
+
+1. Se sincronizó la versión con la versión `0.9.0` de la librería `wuijs-main-lib`.
+> [!IMPORTANT]
+> Se sugiere reemplazar el uso de `WUIPluginSelector` por em modo `hidden` de `WUISelectpicker` introducido en la versión `0.8` del componente y versión `0.8.1` de `wuijs-main-lin`.
+> El plugin `WUIPluginSelector` será deprecado en las seguientes versiones.
+
 ## [v0.8.1] - 2026-05-28
 
 Características:
 
-1. Se sincronizó la versión con la versión `0.8.0` de la librería `wuijs-main-lib`.
+1. Se sincronizó la versión con la versión `0.8.1` de la librería `wuijs-main-lib`.
 
 ## [v0.8.0] - 2026-05-26
 

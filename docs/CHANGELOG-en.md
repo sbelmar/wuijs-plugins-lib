@@ -7,6 +7,15 @@
 
 # Change Log
 
+## [v0.9.0] - 2026-05-28
+
+Features:
+
+1. Synchronized with `wuijs-main-lib` version `0.9.0`.
+> [!IMPORTANT]
+> It is suggested to replace the use of `WUIPluginSelector` with the `hidden` mode of `WUISelectpicker`, introduced in version `0.8` of the component and version `0.8.1` of `wuijs-main-lin`.
+> The `WUIPluginSelector` plugin will be deprecated in subsequent versions.
+
 ## [v0.8.1] - 2026-05-28
 
 Features:
