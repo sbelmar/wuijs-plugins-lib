@@ -604,7 +604,6 @@
 	--wui-codebox-borderradius: 5px;
 	--wui-codebox-bordercolor: var(--wuiplugin-theme-bordercolor-high);
 	--wui-codebox-bgcolor: var(--wuiplugin-theme-bgcolor-over);
-	--wui-codebox-scroll-width: 4px;
 	--wui-codebox-scroll-bgcolor-out: rgb(from var(--wuiplugin-theme-bgcolor-scroll) r g b / 40%);
 	--wui-codebox-scroll-bgcolor-over: rgb(from var(--wuiplugin-theme-bgcolor-scroll) r g b / 70%);
 	--wui-codebox-copyicon-src: none;
@@ -640,7 +639,6 @@
 	--wui-markdown-table-valign: center;
 	--wui-markdown-table-borderradius: 10px;
 	--wui-markdown-table-bordercolor: var(--wuiplugin-theme-bordercolor-high);
-	--wui-markdown-table-scroll-width: 4px;
 	--wui-markdown-table-scroll-bgcolor-out: rgb(from var(--wuiplugin-theme-bgcolor-scroll) r g b / 40%);
 	--wui-markdown-table-scroll-bgcolor-over: rgb(from var(--wuiplugin-theme-bgcolor-scroll) r g b / 70%);
 	--wui-markdown-table-header-bordercolor: var(--wuiplugin-theme-graycolor-high);
@@ -673,7 +671,6 @@
 	--wui-markdown-codebox-borderradius: 5px;
 	--wui-markdown-codebox-bordercolor: var(--wuiplugin-theme-bordercolor-high);
 	--wui-markdown-codebox-bgcolor: var(--wuiplugin-theme-bgcolor-over);
-	--wui-markdown-codebox-scroll-width: 4px;
 	--wui-markdown-codebox-scroll-bgcolor-out: rgb(from var(--wuiplugin-theme-bgcolor-scroll) r g b / 40%);
 	--wui-markdown-codebox-scroll-bgcolor-over: rgb(from var(--wuiplugin-theme-bgcolor-scroll) r g b / 70%);
 	--wui-markdown-codebox-textcolor: var(--wuiplugin-theme-textcolor-active);

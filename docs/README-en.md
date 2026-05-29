@@ -14,9 +14,9 @@
 |                      | |
 | -------------------- | --- |
 | **Library name**     | `wuijs-plugins-lib` |
-| **Library version**  | `0.9.1` ([Change Log](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-en.md)) |
+| **Library version**  | `0.9.2` ([Change Log](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-en.md)) |
 | **NPM package**      | `@wui-js/plugins` ([npm](https://www.npmjs.com/package/@wui-js/plugins)) |
-| **Document version** | `0.9.1.20260528.0` |
+| **Document version** | `0.9.2.20260528.0` |
 | **License**          | `Apache License 2.0` |
 | **Author**           | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repository**       | [https://github.com/wui-js/wuijs-plugins-lib](https://github.com/wui-js/wuijs-plugins-lib) |

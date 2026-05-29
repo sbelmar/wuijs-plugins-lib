@@ -7,6 +7,12 @@
 
 # Registro de Cambios
 
+## [v0.9.2] - 2026-05-28
+
+Características:
+
+1. Se sincronizó la versión con la versión `0.9.2` de la librería `wuijs-main-lib`.
+
 ## [v0.9.1] - 2026-05-28
 
 Características:

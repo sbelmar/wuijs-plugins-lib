@@ -7,6 +7,12 @@
 
 # Change Log
 
+## [v0.9.2] - 2026-05-28
+
+Features:
+
+1. Synchronized with `wuijs-main-lib` version `0.9.2`.
+
 ## [v0.9.1] - 2026-05-28
 
 Features:

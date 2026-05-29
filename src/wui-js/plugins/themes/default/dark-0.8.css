@@ -606,7 +606,6 @@
 	--wui-codebox-borderradius: 5px;
 	--wui-codebox-bordercolor: #4b5563;
 	--wui-codebox-bgcolor: #374151;
-	--wui-codebox-scroll-width: 4px;
 	--wui-codebox-scroll-bgcolor-out: rgb(from #9fa8b6 r g b / 40%);
 	--wui-codebox-scroll-bgcolor-over: rgb(from #9fa8b6 r g b / 70%);
 	--wui-codebox-copyicon-src: none;
@@ -642,7 +641,6 @@
 	--wui-markdown-table-valign: center;
 	--wui-markdown-table-borderradius: 10px;
 	--wui-markdown-table-bordercolor: #4b5563;
-	--wui-markdown-table-scroll-width: 4px;
 	--wui-markdown-table-scroll-bgcolor-out: rgb(from #9fa8b6 r g b / 40%);
 	--wui-markdown-table-scroll-bgcolor-over: rgb(from #9fa8b6 r g b / 70%);
 	--wui-markdown-table-header-bordercolor: #444;
@@ -675,7 +673,6 @@
 	--wui-markdown-codebox-borderradius: 5px;
 	--wui-markdown-codebox-bordercolor: #4b5563;
 	--wui-markdown-codebox-bgcolor: #374151;
-	--wui-markdown-codebox-scroll-width: 4px;
 	--wui-markdown-codebox-scroll-bgcolor-out: rgb(from #9fa8b6 r g b / 40%);
 	--wui-markdown-codebox-scroll-bgcolor-over: rgb(from #9fa8b6 r g b / 70%);
 	--wui-markdown-codebox-textcolor: #f3f4f6;
