@@ -7,6 +7,14 @@
 
 # Change Log
 
+## [v0.11.0] - 2026-06-12
+
+Features:
+
+1. Synchronized with `wuijs-main-lib` version `0.11.0`.
+2. WUIPluginThemes version class update to `0.10`.
+	- Updated `wuiplugin-themes-0.10.css` file with the updating of the CSS variable values ​​of the `WUITabs`, `WUIMenubar` and `WUIButton` components.
+
 ## [v0.10.0] - 2026-06-01
 
 Features:

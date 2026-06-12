@@ -678,6 +678,9 @@
 	--wui-markdown-link-textcolor-hover: var(--wuiplugin-theme-utilitycolor-hightlight);
 	--wui-markdown-link-textdecoration-out: none;
 	--wui-markdown-link-textdecoration-hover: underline;
+	--wui-markdown-iframe-maxheight: 50vh;
+	--wui-markdown-iframe-borderradius: 5px;
+	--wui-markdown-iframe-bordercolor: var(--wuiplugin-theme-bordercolor-high);
 
 	/* wuiplugin-selector */
 

@@ -7,6 +7,14 @@
 
 # Registro de Cambios
 
+## [v0.11.0] - 2026-06-12
+
+Características:
+
+1. Se sincronizó la versión con la versión `0.11.0` de la librería `wuijs-main-lib`.
+2. Se actualizó versión clase WUIPluginThemes a `0.10`.
+	- Se actualizó el archivo `wuiplugin-themes-0.10.css` con la actualización de los valores de las variables CSS de los componentes `WUITabs`, `WUIMenubar` y `WUIButton`.
+
 ## [v0.10.0] - 2026-06-01
 
 Características:
@@ -47,7 +55,7 @@ Características:
 
 1. Se sincronizó la versión con la versión `0.8.0` de la librería `wuijs-main-lib`.
 2. Se actualizó versión clase WUIPluginThemes a `0.8`.
-	- Se actualizó el archivo `wuiplugin-themes-0.8.css` con la actualiación de los valores de las variables CSS de tipo `scroll`.
+	- Se actualizó el archivo `wuiplugin-themes-0.8.css` con la actualización de los valores de las variables CSS de tipo `scroll`.
 
 ## [v0.7.1] - 2026-05-16
 
