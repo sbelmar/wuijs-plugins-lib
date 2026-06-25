@@ -1,0 +1,51 @@
+/*
+ * @file wuiplugin-themes-0.11.js
+ * @class WUIPluginThemes
+ * @version 0.11
+ * @author Sergio E. Belmar V. (wuijs.project@gmail.com)
+ * @copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+ */
+
+class WUIPluginThemes {
+
+	static version = "0.11";
+	static #colorScheme = "";
+
+	getScheme() {
+		return getComputedStyle(document.documentElement).getPropertyValue("color-scheme").trim();
+	}
+
+	getCurrentScheme() {
+		return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+	}
+
+	getTheme() {
+		return getComputedStyle(document.body).getPropertyValue("--wuiplugin-theme-name").trim().replace(/^"|"$/g, "");
+	}
+
+	setScheme(value) {
+		if (typeof (value) === "string" && value.trim().match(/^(light|only light|dark|only dark|light dark|dark light|system)$/i)) {
+			const colorScheme = value.match(/dark light|system/i) ? "light dark" : value.toLowerCase().replace("only ", "").trim();
+			if (WUIPluginThemes.#colorScheme != colorScheme) {
+				const colorClass = colorScheme.replace("light dark", "system");
+				let delay = getComputedStyle(document.documentElement).getPropertyValue("--wuiplugin-theme-transition-delay").trim() || "0";
+				delay = (delay.match(/\d+s$/) ? 1000 : 1) * parseFloat(delay.replace(/m?s$/, ""));
+				document.documentElement.querySelectorAll(".wuiplugin-themes").forEach(element => {
+					element.classList.add("transition");
+				});
+				document.documentElement.dataset.colorScheme = colorScheme;
+				document.documentElement.style.colorScheme = colorScheme;
+				document.documentElement.querySelectorAll(".wuiplugin-themes").forEach(element => {
+					element.classList.remove("system", "light", "dark");
+					element.classList.add(colorClass);
+				});
+				WUIPluginThemes.#colorScheme = colorScheme;
+				setTimeout(() => {
+					document.documentElement.querySelectorAll(".wuiplugin-themes").forEach(element => {
+						element.classList.remove("transition");
+					});
+				}, delay);
+			}
+		}
+	}
+}

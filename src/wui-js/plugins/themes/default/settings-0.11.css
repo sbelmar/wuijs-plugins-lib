@@ -1,0 +1,83 @@
+/*
+@file settings-0.11.css
+@class WUIPluginThemes
+@theme default
+@version 0.11
+@author Sergio E. Belmar V. (wuijs.project@gmail.com)
+@copyright Sergio E. Belmar V. (wuijs.project@gmail.com)
+*/
+
+.wuiplugin-themes.default {
+
+	/* global */
+
+	--wuiplugin-theme-name: "default";
+
+	/* common */
+
+	--wuiplugin-theme-borderradius-low: 10px;
+	--wuiplugin-theme-borderradius-half: 15px;
+	--wuiplugin-theme-borderradius-high: 17px;
+	--wuiplugin-theme-borderradius-round: 50%;
+	--wuiplugin-theme-titlefont: Arial, Helvetica, Verdana, sans-serif;
+	--wuiplugin-theme-input-opener-iconsize: 30px;
+	--wuiplugin-theme-transition-delay: .4s;
+
+	/* light mode */
+
+	--wuiplugin-theme-graycolor-max-light: #fff;
+	--wuiplugin-theme-graycolor-high-light: #ccc;
+	--wuiplugin-theme-graycolor-half-light: #888;
+	--wuiplugin-theme-graycolor-low-light: #444;
+	--wuiplugin-theme-graycolor-min-light: #000;
+	--wuiplugin-theme-shadowcolor-high-light: #304d63;
+	--wuiplugin-theme-shadowcolor-low-light: #959da5;
+	--wuiplugin-theme-bordercolor-max-light: #b5bbc1;
+	--wuiplugin-theme-bordercolor-high-light: #d5dce3;
+	--wuiplugin-theme-bordercolor-low-light: #f0f0f3;
+	--wuiplugin-theme-bgcolor-overlay-light: #010203;
+	--wuiplugin-theme-bgcolor-box-light: #efeff6;
+	--wuiplugin-theme-bgcolor-out-light: #fdfdfe;
+	--wuiplugin-theme-bgcolor-over-light: #f6f6f6;
+	--wuiplugin-theme-bgcolor-scroll-light: #353a40;
+	--wuiplugin-theme-bgcolor-icon-light: #353a40;
+	--wuiplugin-theme-bgcolor-highcontrast-light: #1f2429;
+	--wuiplugin-theme-textcolor-title-light: #000;
+	--wuiplugin-theme-textcolor-active-light: #2d3a47;
+	--wuiplugin-theme-textcolor-focus-light: #1f2937;
+	--wuiplugin-theme-utilitycolor-hightlight-light: #1e90ff;
+	--wuiplugin-theme-utilitycolor-warning-light: #f44343;
+	--wuiplugin-theme-utilitycolor-disabled-light: #d5dce3;
+	--wuiplugin-theme-intencitycolor-low-light: mediumaquamarine;
+	--wuiplugin-theme-intencitycolor-half-light: darkorange;
+	--wuiplugin-theme-intencitycolor-high-light: orangered;
+
+	/* dark mode */
+
+	--wuiplugin-theme-graycolor-max-dark: #000;
+	--wuiplugin-theme-graycolor-high-dark: #444;
+	--wuiplugin-theme-graycolor-half-dark: #888;
+	--wuiplugin-theme-graycolor-low-dark: #ccc;
+	--wuiplugin-theme-graycolor-min-dark: #fff;
+	--wuiplugin-theme-shadowcolor-high-dark: #2f3a48;
+	--wuiplugin-theme-shadowcolor-low-dark: #1f2937;
+	--wuiplugin-theme-bordercolor-max-dark: #4b5563;
+	--wuiplugin-theme-bordercolor-high-dark: #4b5563;
+	--wuiplugin-theme-bordercolor-low-dark: #374151;
+	--wuiplugin-theme-bgcolor-overlay-dark: #000;
+	--wuiplugin-theme-bgcolor-box-dark: #2f3a48;
+	--wuiplugin-theme-bgcolor-out-dark: #1f2937;
+	--wuiplugin-theme-bgcolor-over-dark: #374151;
+	--wuiplugin-theme-bgcolor-scroll-dark: #9fa8b6;
+	--wuiplugin-theme-bgcolor-icon-dark: #d1d5db;
+	--wuiplugin-theme-bgcolor-highcontrast-dark: #f9fafb;
+	--wuiplugin-theme-textcolor-title-dark: #fff;
+	--wuiplugin-theme-textcolor-active-dark: #f3f4f6;
+	--wuiplugin-theme-textcolor-focus-dark: #fff;
+	--wuiplugin-theme-utilitycolor-hightlight-dark: #1e90ff;
+	--wuiplugin-theme-utilitycolor-warning-dark: #f44343;
+	--wuiplugin-theme-utilitycolor-disabled-dark: #4b5563;
+	--wuiplugin-theme-intencitycolor-low-dark: mediumaquamarine;
+	--wuiplugin-theme-intencitycolor-half-dark: darkorange;
+	--wuiplugin-theme-intencitycolor-high-dark: orangered;
+}

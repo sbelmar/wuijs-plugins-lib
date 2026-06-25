@@ -7,6 +7,15 @@
 
 # Change Log
 
+## [v0.12.0] - 2026-06-24
+
+Features:
+
+1. Synchronized with `wuijs-main-lib` version `0.12.0`.
+2. Updated WUIPluginThemes class version to `0.11`.
+	- Refactored JS code.
+	- Added the functionality to add different themes to different elements of the same HTML document.
+
 ## [v0.11.0] - 2026-06-12
 
 Features:

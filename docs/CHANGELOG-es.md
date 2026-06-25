@@ -7,6 +7,15 @@
 
 # Registro de Cambios
 
+## [v0.12.0] - 2026-06-24
+
+Características:
+
+1. Se sincronizó la versión con la versión `0.12.0` de la librería `wuijs-main-lib`.
+2. Se actualizó versión clase WUIPluginThemes a `0.11`.
+	- Se refactorizó el código JS.
+	- Se agregó la funcionalidad de agregar distintos temas en distintos elementos de un mismo documento HTML.
+
 ## [v0.11.0] - 2026-06-12
 
 Características:

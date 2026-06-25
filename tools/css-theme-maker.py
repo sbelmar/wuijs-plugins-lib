@@ -3,10 +3,10 @@ import re
 import argparse
 
 # Default arguments
-default_source_path = "../src/wui-js/plugins/themes/wuiplugin-themes-0.10.css"
+default_source_path = "../src/wui-js/plugins/themes/wuiplugin-themes-0.11.css"
 default_themes_dir  = "../src/wui-js/plugins/themes"
 default_name        = "default"
-default_version     = "0.10"
+default_version     = "0.11"
 
 # Get arguments
 parser = argparse.ArgumentParser(
@@ -51,7 +51,7 @@ def parse_settings_file(filepath, target_theme):
     settings = {}
 
     # State flags
-    in_header     = True
+    in_header     = False
     in_settings   = False
 
     # Regexes
@@ -65,12 +65,12 @@ def parse_settings_file(filepath, target_theme):
         stripped = line.strip()
 
         # Capture header block (leading /* ... */ comment)
-        if in_header:
-            if stripped.startswith('/*') or stripped.startswith('*') or stripped == '':
-                if stripped != '':
-                    header.append(line)
-            else:
+        if in_header or stripped.startswith('/*') or stripped.startswith('*/') or stripped == '':
+            header.append(line)
+            if stripped.startswith('*/'):
                 in_header = False
+            else:    
+                in_header = True
 
         # Detect start of the target theme block
         sett_match = settings_start.match(line)
