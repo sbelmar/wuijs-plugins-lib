@@ -7,6 +7,22 @@
 
 # Change Log
 
+## [v0.13.0] - 2026-07-20
+
+Features:
+
+1. Synchronized with `wuijs-main-lib` version `0.13.0`.
+2. Updated WUIPluginThemes (ex WUIPluginThemes) class version to `0.12`.
+	- Converted class into an extension of the `WUIBody` class from the `wuijs-main-lib` library.
+	- Renamed `WUIPluginThemes` class to `WUIPluginBodyThemes`.
+	- Renamed `--wuiplugin-theme(s)*`CSS vars prefix to `--wuiplugin-bodytheme*`.
+	- Removed `--wui-selectpicker-box-button-textsize` CSS var.
+	- Removed `css-theme-maker.py` tool to `bodytheme-css-maker.py`.
+	- Removed `clone-theme.py` tool to `bodytheme-clone.py`.
+3. Added WUIPluginFormValidation class `0.1` version.
+4. Added WUIPluginFormHttp class `0.1` version.
+5. Deprecated WUIPluginSelector class.
+
 ## [v0.12.0] - 2026-06-24
 
 Features:

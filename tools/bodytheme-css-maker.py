@@ -3,17 +3,17 @@ import re
 import argparse
 
 # Default arguments
-default_source_path = "../src/wui-js/plugins/themes/wuiplugin-themes-0.11.css"
-default_themes_dir  = "../src/wui-js/plugins/themes"
+default_source_path = "../src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.css"
+default_themes_dir  = "../src/wui-js/plugins/bodytheme"
 default_name        = "default"
-default_version     = "0.11"
+default_version     = "0.12"
 
 # Get arguments
 parser = argparse.ArgumentParser(
-    description="Make CSS themes from WUIPluginThemes CSS files.",
+    description="Make CSS theme files from WUIPluginBodyTheme CSS files.",
     formatter_class=argparse.ArgumentDefaultsHelpFormatter
 )
-parser.add_argument("-p", "--plugin",    type=str, help="Path to the themes plugin CSS source file.", default=default_source_path)
+parser.add_argument("-p", "--plugin",    type=str, help="Path to the body themes plugin CSS source file.", default=default_source_path)
 parser.add_argument("-d", "--directory", type=str, help="Themes base directory.", default=default_themes_dir)
 parser.add_argument("-n", "--name",      type=str, help="Theme name.", default=default_name)
 parser.add_argument("-v", "--version",   type=str, help="Theme version.", default=default_version)
@@ -55,9 +55,9 @@ def parse_settings_file(filepath, target_theme):
     in_settings   = False
 
     # Regexes
-    # Matches:  .wuiplugin-themes.theme-default {
-    # or:       .wuiplugin-themes:is(.theme-1, .theme-default) {
-    settings_start = re.compile(r'^\.wuiplugin-themes(?::is\((.+)\)|(\.[\w-]+))\s*{')
+    # Matches:  .wuiplugin-bodytheme.theme-default {
+    # or:       .wuiplugin-bodytheme:is(.theme-1, .theme-default) {
+    settings_start = re.compile(r'^\.wuiplugin-bodytheme(?::is\((.+)\)|(\.[\w-]+))\s*{')
     block_end      = re.compile(r'^\s*}\s*$')
     var_decl       = re.compile(r'^\s*(--[a-zA-Z0-9-]+):\s*(.+?);\s*$')
 
@@ -100,9 +100,9 @@ def parse_css_file(filepath):
     Reads the base CSS file (e.g. WUIPluginThemes-0.1.css) and extracts:
       - header  : leading comment block
       - components : list of items (vars, comments, empty lines) inside
-                     the .wuiplugin-themes { } block
+                     the .wuiplugin-bodytheme { } block
 
-    Note: setting variable blocks (.wuiplugin-themes:is(...)) are intentionally
+    Note: setting variable blocks (.wuiplugin-bodytheme:is(...)) are intentionally
           ignored here — they are now read from a separate file via parse_settings_file().
     """
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -117,8 +117,8 @@ def parse_css_file(filepath):
     in_components = False
 
     # Regexes
-    settings_start  = re.compile(r'^\.wuiplugin-themes:is\((.+)\)\s*{')
-    components_start = re.compile(r'^\.wuiplugin-themes\s*{')
+    settings_start  = re.compile(r'^\.wuiplugin-bodytheme:is\((.+)\)\s*{')
+    components_start = re.compile(r'^\.wuiplugin-bodytheme\s*{')
     block_end        = re.compile(r'^\s*}\s*$')
     var_decl         = re.compile(r'^\s*(--[a-zA-Z0-9-]+):\s*(.+?);\s*$')
     comment_line     = re.compile(r'^\s*/\*\s*(.+)\s*\*/\s*$')
@@ -194,12 +194,12 @@ def generate_theme(mode, theme_name, header, settings, components, output_path):
         output_lines.append(line)
     output_lines.append("\n")  # spacing
 
-    class_name = f".wuiplugin-themes.{theme_name}.{mode} " + "{\n"
+    class_name = f".wuiplugin-bodytheme.{theme_name}.{mode} " + "{\n"
     output_lines.append(class_name)
     output_lines.append("\n")
-    output_lines.append("	/* wuiplugin-theme */\n")
+    output_lines.append("	/* wuiplugin-bodytheme */\n")
     output_lines.append("\n")
-    output_lines.append(f'	--wuiplugin-theme-name: "{theme_name}";\n')
+    output_lines.append(f'	--wuiplugin-bodytheme-name: "{theme_name}";\n')
 
     # Lookup starts with resolved settings; grows with each resolved component var
     lookup = resolved_settings.copy()

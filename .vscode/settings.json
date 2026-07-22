@@ -3,8 +3,10 @@
 		"statusBar.background": "#9933ff",
 		"statusBar.foreground": "#e7e7e7",
 		"statusBarItem.hoverBackground": "#b266ff",
-		"statusBarItem.remoteBackground": "#9933ff",
-		"statusBarItem.remoteForeground": "#e7e7e7"
+		"statusBarItem.remoteBackground": "#ff8f20",
+		"statusBarItem.remoteForeground": "#e7e7e7",
+		"statusBar.debuggingBackground": "#9933ff",
+		"statusBar.debuggingForeground": "#e7e7e7"
 	},
 	"peacock.color": "#9933ff",
 	"liveServer.settings.port": 5501,

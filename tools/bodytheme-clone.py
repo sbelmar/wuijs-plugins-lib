@@ -3,14 +3,14 @@ import re
 import argparse
 
 # Default arguments
-default_source_path = "../src/wui-js/plugins/themes/wuiplugin-themes-0.11.css"
-default_themes_dir  = "../src/wui-js/plugins/themes"
+default_source_path = "../src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.css"
+default_themes_dir  = "../src/wui-js/plugins/bodytheme"
 default_source      = "default"
 default_version     = "0.1"
 
 # Get arguments
 parser = argparse.ArgumentParser(
-    description="Clone an existing WUIPluginThemes theme as a starting point for a new one.",
+    description="Clone an existing theme as a starting point for a new one.",
     formatter_class=argparse.ArgumentDefaultsHelpFormatter
 )
 parser.add_argument("-p", "--plugin",    type=str, help="Path to the themes plugin CSS source file.", default=default_source_path)

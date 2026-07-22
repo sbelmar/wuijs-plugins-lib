@@ -14,9 +14,9 @@
 |                      | |
 | -------------------- | --- |
 | **Library name**     | `wuijs-plugins-lib` |
-| **Library version**  | `0.12.0` ([Change Log](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-en.md)) |
+| **Library version**  | `0.13.0` ([Change Log](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-en.md)) |
 | **NPM package**      | `@wui-js/plugins` ([npm](https://www.npmjs.com/package/@wui-js/plugins)) |
-| **Document version** | `0.12.0.20260624.0` |
+| **Document version** | `0.13.0.20260702.0` |
 | **License**          | `Apache License 2.0` |
 | **Author**           | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repository**       | [https://github.com/wui-js/wuijs-plugins-lib](https://github.com/wui-js/wuijs-plugins-lib) |
@@ -28,8 +28,10 @@
 *   [Overview](#overview)
 *   [Installation](#install)
 *   [Plugins](#plugins)
-	*   [WUIPluginThemes](#wuiplugin-themes)
-	*   [WUIPluginSelector](#wuiplugin-selector)
+	*   [WUIPluginBodyTheme](#wuiplugin-bodytheme)
+	*   [WUIPluginFormValidation](#wuiplugin-formvalidation)
+	*   [WUIPluginFormHttp](#wuiplugin-formhttp)
+	*   [WUIPluginSelector](#wuiplugin-selector) (deprecated)
 *   [Demos](#demos) (CodeSandbox)
 
 <a name="overview"></a>
@@ -53,10 +55,12 @@ WUI/JS Plugins Lib is part of the WUI/JS project, which currently consists of 4 
 
 ### Table of Plugins
 
-| Plugin Name                              | Version | Description |
-| ---------------------------------------- |:-------:| ----------- |
-| [WUIPluginThemes](#wuiplugin-themes)     | `0.11`  | Plugin for managing pre-designed themes and light and dark modes. |
-| [WUIPluginSelector](#wuiplugin-selector) | `0.4`   | Modal selector based on WUIModal. |
+| Plugin Name                                             | Version | Description |
+| ------------------------------------------------------- |:-------:| ----------- |
+| [WUIPluginBodyTheme](#wuiplugin-bodytheme)              | `0.12`  | Plugin for managing pre-designed themes and light and dark modes. |
+| [WUIPluginFormValidation](#wuiplugin-formvalidation)    | `0.1`   | Input validation extension for WUIForm. |
+| [WUIPluginFormHttp](#wuiplugin-formhttp)      | `0.1`   | Data transport extension for WUIForm (JSON submission). |
+| [WUIPluginSelector](#wuiplugin-selector) `(deprecated)` | `0.4`   | Modal selector based on WUIModal. |
 
 ### Directory Map
 
@@ -126,21 +130,22 @@ The resources will be available in the `./node_modules/@wui-js/plugins` director
 
 ## Plugins
 
-<a name="wuiplugin-themes"></a>
+<a name="wuiplugin-bodytheme"></a>
 
-### WUIPluginThemes
+### WUIPluginBodyTheme
 
-Version: `0.11`
+Version: `0.12`
 
 Plugin for managing pre-designed themes and light and dark modes.
 
 #### Description
 
-WUIPluginThemes provides a theming system for web applications through two layers of CSS variables.
+WUIPluginBodyTheme provides a theming system for web applications through two layers of CSS variables.
+Unlike a standalone plugin class, it extends the `WUIBody` class from `wuijs-main-lib`: on load, it attaches a `theme` namespace to `WUIBody.prototype`, exposing `getScheme`, `getCurrentScheme`, `getTheme` and `setScheme` on any `WUIBody` instance as `body.theme.*`.
 
 #### Covered Components
 
-WUIPluginThemes provides theme support for the following WUI/JS Main Lib components:
+WUIPluginBodyTheme provides theme support for the following WUI/JS Main Lib components:
 
 - `wui-scrolly`
 - `wui-icon`
@@ -154,32 +159,35 @@ WUIPluginThemes provides theme support for the following WUI/JS Main Lib compone
 - `wui-list`
 - `wui-table`
 - `wui-form`
-- `wui-selectpicker`
 - `wui-datepicker`
 - `wui-timepicker`
 - `wui-colorpicker`
 - `wui-switch`
 - `wui-intensity`
 - `wui-button`
-- `wuiplugin-selector`
-
-It also provides theme support for the `wuiplugin-selector` plugin.
+- `wui-codebox` (lab package)
+- `wui-markdown` (lab package)
+- `wui-tree` (lab package)
 
 #### Sources
 
 | Type | File |
 | ---- | ---- |
-| CSS  | [src/wui-js/plugins/themes/wuiplugin-themes-0.11.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/wuiplugin-themes-0.11.css) |
-| JS   | [src/wui-js/plugins/themes/wuiplugin-themes-0.11.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/wuiplugin-themes-0.11.js) |
-| CSS  | [src/wui-js/plugins/themes/default/settings-0.11.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/settings-0.11.css) |
-| CSS  | [src/wui-js/plugins/themes/default/light-0.11.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/light-0.11.css) |
-| CSS  | [src/wui-js/plugins/themes/default/dark-0.11.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/themes/default/dark-0.11.css) |
+| CSS  | [src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.css) |
+| JS   | [src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.js) |
+| CSS  | [src/wui-js/plugins/bodytheme/default/settings-0.12.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/default/settings-0.12.css) |
+| CSS  | [src/wui-js/plugins/bodytheme/default/light-0.12.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/default/light-0.12.css) |
+| CSS  | [src/wui-js/plugins/bodytheme/default/dark-0.12.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/default/dark-0.12.css) |
+
+#### Dependencies
+
+| Class     | Version | Description |
+| --------- |:-------:| ----------- |
+| `WUIBody` | `0.5`   | Base class extended by the plugin. Required. |
 
 #### Constructor
 
-| Tipo            | Descripción |
-| --------------- | ----------- |
-| WUIPluginThemes | `WUIPluginThemes()` |
+It does not add a constructor; it extends the `WUIBody` prototype. Instantiate `WUIBody` directly (`new WUIBody([properties])`).
 
 #### Class Properties
 
@@ -193,12 +201,14 @@ It does not have instance properties.
 
 #### Methods
 
+`WUIBody.prototype.theme` is a read-only namespace getter. Its methods are called as `body.theme.*` on a `WUIBody` instance:
+
 | Method           | Return type | Description |
 | ---------------- | ----------- | ----------- |
-| getScheme        | `string`    | `getScheme()`<br><br>Returns the value of the CSS `color-scheme` property defined on the `<html>` element. Possible values: `"light"`, `"dark"`, `"light dark"`, `""`. |
-| getCurrentScheme | `string`    | `getCurrentScheme()`<br><br>Returns the operating system's preferred color scheme, regardless of the scheme configured in the application. Possible values: `"light"`, `"dark"`. |
-| getTheme         | `string`    | `getTheme()`<br><br>Returns the active theme name based on the CSS classes present on `document.body`. |
-| setScheme        | `void`      | `setScheme(scheme)`<br><br>Sets the application's color scheme. Updates the CSS classes on `document.body` and the `color-scheme` attribute on the `<html>` element. If the new scheme differs from the current one, automatically activates the background transition. The transition duration is controlled by the CSS variable `--wuiplugin-theme-transition-delay` (default value: `0.4s`). Possible values: `"light"`, `"dark"`, `"light dark"`, `"system"`. |
+| getScheme        | `string`    | `theme.getScheme()`<br><br>Returns the value of the CSS `color-scheme` property defined on the `<html>` element. Possible values: `"light"`, `"dark"`, `"light dark"`, `""`. |
+| getCurrentScheme | `string`    | `theme.getCurrentScheme()`<br><br>Returns the operating system's preferred color scheme, regardless of the scheme configured in the application. Possible values: `"light"`, `"dark"`. |
+| getTheme         | `string`    | `theme.getTheme()`<br><br>Returns the active theme name based on the CSS classes present on `document.body`. |
+| setScheme        | `void`      | `theme.setScheme(scheme)`<br><br>Sets the application's color scheme. Updates the CSS classes on `document.body` and the `color-scheme` attribute on the `<html>` element. If the new scheme differs from the current one, automatically activates the background transition. The transition duration is controlled by the CSS variable `--wuiplugin-bodytheme-transition-delay` (default value: `0.4s`). Possible values: `"light"`, `"dark"`, `"light dark"`, `"system"`. |
 
 #### Predefined themes
 
@@ -208,51 +218,51 @@ It does not have instance properties.
 
 #### CSS Variables
 
-The theme setting variables are defined in the file `src/wui-js/plugins/themes/{theme-name}/{version}.css` and are organized in two suffix variants: `{variable}-light` for light mode and `{variable}-dark` for dark mode.
+The theme setting variables are defined in the file `src/wui-js/plugins/bodytheme/{theme-name}/{version}.css` and are organized in two suffix variants: `{variable}-light` for light mode and `{variable}-dark` for dark mode.
 Values without a suffix are common to both modes.
 
 **Colors (with variations by color mode):**
 
-| Base variable                                             | Description |
-| --------------------------------------------------------- | ----------- |
-| `--wuiplugin-theme-graycolor-max-(light\|dark)`           | Maximum gray (white in light, black in dark). |
-| `--wuiplugin-theme-graycolor-high-(light\|dark)`          | High gray. |
-| `--wuiplugin-theme-graycolor-half-(light\|dark)`          | Mid gray. |
-| `--wuiplugin-theme-graycolor-low-(light\|dark)`           | Low gray. |
-| `--wuiplugin-theme-graycolor-min-(light\|dark)`           | Minimum gray (black in light, white in dark). |
-| `--wuiplugin-theme-shadowcolor-high-(light\|dark)`        | Strong shadow color. |
-| `--wuiplugin-theme-shadowcolor-low-(light\|dark)`         | Soft shadow color. |
-| `--wuiplugin-theme-bordercolor-max-(light\|dark)`         | Maximum border color. |
-| `--wuiplugin-theme-bordercolor-high-(light\|dark)`        | High border color. |
-| `--wuiplugin-theme-bordercolor-low-(light\|dark)`         | Low border color. |
-| `--wuiplugin-theme-bgcolor-overlay-(light\|dark)`         | Overlay background color. |
-| `--wuiplugin-theme-bgcolor-box-(light\|dark)`             | Dialog and panel background color. |
-| `--wuiplugin-theme-bgcolor-out-(light\|dark)`             | Background color in normal state. |
-| `--wuiplugin-theme-bgcolor-over-(light\|dark)`            | Background color in hover or selected state. |
-| `--wuiplugin-theme-bgcolor-scroll-(light\|dark)`          | Scrollbar color. |
-| `--wuiplugin-theme-bgcolor-icon-(light\|dark)`            | Icon fill color. |
-| `--wuiplugin-theme-bgcolor-highcontrast-(light\|dark)`    | High-contrast background color (tooltips, etc.). |
-| `--wuiplugin-theme-textcolor-title-(light\|dark)`         | Title text color. |
-| `--wuiplugin-theme-textcolor-active-(light\|dark)`        | Active state text color. |
-| `--wuiplugin-theme-textcolor-focus-(light\|dark)`         | Focused state text color. |
-| `--wuiplugin-theme-utilitycolor-hightlight-(light\|dark)` | Primary accent color (links, buttons, selections). |
-| `--wuiplugin-theme-utilitycolor-warning-(light\|dark)`    | Warning or error color. |
-| `--wuiplugin-theme-utilitycolor-disabled-(light\|dark)`   | Disabled element color. |
-| `--wuiplugin-theme-intencitycolor-low-(light\|dark)`      | Low intensity color. |
-| `--wuiplugin-theme-intencitycolor-half-(light\|dark)`     | Medium intensity color. |
-| `--wuiplugin-theme-intencitycolor-high-(light\|dark)`     | High intensity color. |
+| Base variable                                                 | Description |
+| ------------------------------------------------------------- | ----------- |
+| `--wuiplugin-bodytheme-graycolor-max-(light\|dark)`           | Maximum gray (white in light, black in dark). |
+| `--wuiplugin-bodytheme-graycolor-high-(light\|dark)`          | High gray. |
+| `--wuiplugin-bodytheme-graycolor-half-(light\|dark)`          | Mid gray. |
+| `--wuiplugin-bodytheme-graycolor-low-(light\|dark)`           | Low gray. |
+| `--wuiplugin-bodytheme-graycolor-min-(light\|dark)`           | Minimum gray (black in light, white in dark). |
+| `--wuiplugin-bodytheme-shadowcolor-high-(light\|dark)`        | Strong shadow color. |
+| `--wuiplugin-bodytheme-shadowcolor-low-(light\|dark)`         | Soft shadow color. |
+| `--wuiplugin-bodytheme-bordercolor-max-(light\|dark)`         | Maximum border color. |
+| `--wuiplugin-bodytheme-bordercolor-high-(light\|dark)`        | High border color. |
+| `--wuiplugin-bodytheme-bordercolor-low-(light\|dark)`         | Low border color. |
+| `--wuiplugin-bodytheme-bgcolor-overlay-(light\|dark)`         | Overlay background color. |
+| `--wuiplugin-bodytheme-bgcolor-box-(light\|dark)`             | Dialog and panel background color. |
+| `--wuiplugin-bodytheme-bgcolor-out-(light\|dark)`             | Background color in normal state. |
+| `--wuiplugin-bodytheme-bgcolor-over-(light\|dark)`            | Background color in hover or selected state. |
+| `--wuiplugin-bodytheme-bgcolor-scroll-(light\|dark)`          | Scrollbar color. |
+| `--wuiplugin-bodytheme-bgcolor-icon-(light\|dark)`            | Icon fill color. |
+| `--wuiplugin-bodytheme-bgcolor-highcontrast-(light\|dark)`    | High-contrast background color (tooltips, etc.). |
+| `--wuiplugin-bodytheme-textcolor-title-(light\|dark)`         | Title text color. |
+| `--wuiplugin-bodytheme-textcolor-active-(light\|dark)`        | Active state text color. |
+| `--wuiplugin-bodytheme-textcolor-focus-(light\|dark)`         | Focused state text color. |
+| `--wuiplugin-bodytheme-utilitycolor-hightlight-(light\|dark)` | Primary accent color (links, buttons, selections). |
+| `--wuiplugin-bodytheme-utilitycolor-warning-(light\|dark)`    | Warning or error color. |
+| `--wuiplugin-bodytheme-utilitycolor-disabled-(light\|dark)`   | Disabled element color. |
+| `--wuiplugin-bodytheme-intencitycolor-low-(light\|dark)`      | Low intensity color. |
+| `--wuiplugin-bodytheme-intencitycolor-half-(light\|dark)`     | Medium intensity color. |
+| `--wuiplugin-bodytheme-intencitycolor-high-(light\|dark)`     | High intensity color. |
 
 **Typography and metrics (common, no color mode variant):**
 
-| Variable                                  | Default value                           | Description |
-| ----------------------------------------- | --------------------------------------- | ----------- |
-| `--wuiplugin-theme-borderradius-low`      | `10px`                                  | Low border radius. |
-| `--wuiplugin-theme-borderradius-half`     | `15px`                                  | Medium border radius. |
-| `--wuiplugin-theme-borderradius-high`     | `17px`                                  | High border radius. |
-| `--wuiplugin-theme-borderradius-round`    | `50%`                                   | Circular border radius. |
-| `--wuiplugin-theme-titlefont`             | `Arial, Helvetica, Verdana, sans-serif` | Font family for titles. |
-| `--wuiplugin-theme-input-opener-iconsize` | `30px`                                  | Opener icon size for form fields. |
-| `--wuiplugin-theme-transition-delay`      | `0.4s`                                  | Color scheme transition duration. |
+| Variable                                      | Default value                           | Description |
+| --------------------------------------------- | --------------------------------------- | ----------- |
+| `--wuiplugin-bodytheme-borderradius-low`      | `10px`                                  | Low border radius. |
+| `--wuiplugin-bodytheme-borderradius-half`     | `15px`                                  | Medium border radius. |
+| `--wuiplugin-bodytheme-borderradius-high`     | `17px`                                  | High border radius. |
+| `--wuiplugin-bodytheme-borderradius-round`    | `50%`                                   | Circular border radius. |
+| `--wuiplugin-bodytheme-titlefont`             | `Arial, Helvetica, Verdana, sans-serif` | Font family for titles. |
+| `--wuiplugin-bodytheme-input-opener-iconsize` | `30px`                                  | Opener icon size for form fields. |
+| `--wuiplugin-bodytheme-transition-delay`      | `0.4s`                                  | Color scheme transition duration. |
 
 #### Implementation
 
@@ -260,24 +270,24 @@ There are two implementation modes:
 
 **Using generated CSS files**:
 
-Use only the generated CSS files (`[light|dark]-{version}.css`) located in the theme directory (`src/wui-js/plugins/themes/{name}/`).
+Use only the generated CSS files (`[light|dark]-{version}.css`) located in the theme directory (`src/wui-js/plugins/bodytheme/{name}/`).
 Recommended if dynamic switching between light and dark modes is not required.
 
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/plugins/themes/default/dark-0.11.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/plugins/bodytheme/default/dark-0.12.css">
 ```
 
 HTML code:
 
 ```html
-<body class="wuiplugin-themes default dark"></body>
+<body class="wuiplugin-bodytheme default dark"></body>
 ```
 
 **Using JS class instantiation:**
 
-It requires the implementation of the JS class `WUIPluginThemes`, the source CSS file `wuiplugin-themes-0.11.css` and the theme settings CSS file `wui-js/plugins/themes/{name}/settings-{version}.css`.
+It requires the implementation of the JS class `WUIBody`, the plugin JS/CSS files `wuiplugin-bodytheme-0.12.{js,css}` and the theme settings CSS file `wui-js/plugins/bodytheme/{name}/settings-{version}.css`.
 Additionally, the viewer where it is displayed must support the CSS function `light-dark()` [https://www.w3schools.com/cssref/func_light-dark.php](https://www.w3schools.com/cssref/func_light-dark.php)
 
 CSS code:
@@ -302,10 +312,11 @@ HTML head:
 
 ```html
 <link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/switch/wui-switch-0.7.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/plugins/themes/wuiplugin-themes-0.11.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/plugins/themes/default/settings-0.11.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/plugins/bodytheme/default/settings-0.12.css">
+<script type="text/javascript" src="./libraries/wui-js/main/body/wui-body-0.5.js"></script>
 <script type="text/javascript" src="./libraries/wui-js/main/switch/wui-switch-0.7.js"></script>
-<script type="text/javascript" src="./libraries/wui-js/plugins/themes/wuiplugin-themes-0.11.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.js"></script>
 ```
 
 > [!TIP]
@@ -314,7 +325,7 @@ HTML head:
 HTML code:
 
 ```html
-<body class="wuiplugin-themes default light">
+<body class="wuiplugin-bodytheme default light">
 	<nav>
 		<div class="wui-switch my-switch">
 			<input type="checkbox" name="mySwitch">
@@ -327,13 +338,13 @@ JS code:
 
 ```js
 const init = () => {
-	const themes = new WUIPluginThemes();
+	const body = new WUIBody();
 	const switchbox = new WUISwitch({
 		selector: ".wui-switch.my-switch",
 		value: "1",
 		activated: false,
 		onChange: (value, activated) => {
-			themes.setScheme(activated ? "dark" : "light");
+			body.theme.setScheme(activated ? "dark" : "light");
 		}
 	});
 	switchbox.init();
@@ -343,66 +354,66 @@ window.addEventListener("DOMContentLoaded", init);
 ```
 
 > [!TIP]
-> You can check this working example at the link: [http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-themes-switchmode&lang=en](http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-themes-switchmode&lang=en).
+> You can check this working example at the link: [http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-bodytheme-switchmode&lang=en](http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-bodytheme-switchmode&lang=en).
 
 #### Theme Cloning Tool
 
-The `tools/clone-theme.py` script creates a new theme by copying the configuration file of an existing theme and replacing its CSS selector. It is the recommended starting point before running `css-theme-maker.py`.
+The `tools/bodytheme-clone.py` script creates a new theme by copying the configuration file of an existing theme and replacing its CSS selector. It is the recommended starting point before running `bodytheme-css-maker.py`.
 
 ```bash
-python ./clone-theme.py -n <new-theme-name>
+python ./bodytheme-clone.py -n <new-theme-name>
 
-python ./clone-theme.py -d <themes-directory> -s <source-theme> -n <new-theme-name> -v <theme-version>
+python ./bodytheme-clone.py -d <themes-directory> -s <source-theme> -n <new-theme-name> -v <theme-version>
 ```
 
-| Option                 | Default value                                           | Description |
-| ---------------------- | ------------------------------------------------------- | ----------- |
-| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/themes/wuiplugin-themes-0.11.css` | Path to the themes plugin CSS source file. |
-| `-d`,<br>`--directory` | `../src/wui-js/plugins/themes`                          | Themes base directory. |
-| `-s`,<br>`--source`    | `default`                                               | Name of the theme to clone. |
-| `-n`,<br>`--name`      | _(required)_                                            | Name of the new theme. |
-| `-v`,<br>`--version`   | `0.1`                                                   | Theme version. |
+| Option                 | Default value                                                  | Description |
+| ---------------------- | -------------------------------------------------------------- | ----------- |
+| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.css` | Path to the bodytheme plugin CSS source file. |
+| `-d`,<br>`--directory` | `../src/wui-js/plugins/bodytheme`                              | Themes base directory. |
+| `-s`,<br>`--source`    | `default`                                                      | Name of the theme to clone. |
+| `-n`,<br>`--name`      | _(required)_                                                   | Name of the new theme. |
+| `-v`,<br>`--version`   | `0.1`                                                          | Theme version. |
 
 The output file is generated at `{directory}/{name}/settings-{version}.css` with the CSS selector updated to the new name.
 
 #### Theme Generation Tool
 
-The `tools/css-theme-maker.py` makes standardized CSS files by resolving all `var()` references in the source file, producing a flat CSS file for each color mode. It reads the variable configuration from `{directory}/{name}/settings-{version}.css`.
+The `tools/bodytheme-css-maker.py` makes standardized CSS files by resolving all `var()` references in the source file, producing a flat CSS file for each color mode. It reads the variable configuration from `{directory}/{name}/settings-{version}.css`.
 
 ```bash
-python ./css-theme-maker.py
+python ./bodytheme-css-maker.py
 
-python ./css-theme-maker.py -p <plugin-css-path> -d <themes-directory> -n <theme-name> -v <theme-version>
+python ./bodytheme-css-maker.py -p <plugin-css-path> -d <themes-directory> -n <theme-name> -v <theme-version>
 ```
 
-| Option                 | Default value                                           | Description |
-| ---------------------- | ------------------------------------------------------- | ----------- |
-| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/themes/wuiplugin-themes-0.11.css` | Path to the themes plugin CSS source file. |
-| `-d`,<br>`--directory` | `../src/wui-js/plugins/themes`                          | Themes base directory. |
-| `-n`,<br>`--name`      | `default`                                               | Theme name. |
-| `-v`,<br>`--version`   | `0.9`                                                   | Theme version. |
+| Option                 | Default value                                                  | Description |
+| ---------------------- | -------------------------------------------------------------- | ----------- |
+| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.css` | Path to the bodytheme plugin CSS source file. |
+| `-d`,<br>`--directory` | `../src/wui-js/plugins/bodytheme`                              | Themes base directory. |
+| `-n`,<br>`--name`      | `default`                                                      | Theme name. |
+| `-v`,<br>`--version`   | `0.12`                                                         | Theme version. |
 
 Output files are generated in `{directory}/{name}/` with the names `light-{version}.css` and `dark-{version}.css`.
 
 #### Customizing predefined themes
 
 ```css
-body.wuiplugin-themes.default {
-	--wuiplugin-theme-utilitycolor-hightlight-light: #e91e63;
-    --wuiplugin-theme-utilitycolor-hightlight-dark: #f06292;
-    --wuiplugin-theme-bgcolor-out-light: #fff8f9;
-    --wuiplugin-theme-bgcolor-out-dark: #1a0a0d;
+body.wuiplugin-bodytheme.default {
+	--wuiplugin-bodytheme-utilitycolor-hightlight-light: #e91e63;
+    --wuiplugin-bodytheme-utilitycolor-hightlight-dark: #f06292;
+    --wuiplugin-bodytheme-bgcolor-out-light: #fff8f9;
+    --wuiplugin-bodytheme-bgcolor-out-dark: #1a0a0d;
 }
 ```
 
 > [!IMPORTANT]
-> For the changes to be applied, it is important to include the root element, in this case `<body>`, with the class `wuiplugin-themes` and the theme name. This way, the definition will have greater specificity and will be applied to the definitions of the specified theme.
+> For the changes to be applied, it is important to include the root element, in this case `<body>`, with the class `wuiplugin-bodytheme` and the theme name. This way, the definition will have greater specificity and will be applied to the definitions of the specified theme.
 
 > [!TIP]
 > To maintain the standard proposed by the WUI/JS library documentation, this customization can be done in the `WUI.css` file.
 
 > [!TIP]
-> You can check this working example at the link: [http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-themes-customtheme&lang=en](http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-themes-customtheme&lang=en).
+> You can check this working example at the link: [http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-bodytheme-customtheme&lang=en](http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-bodytheme-customtheme&lang=en).
 
 #### Customization of your own themes
 
@@ -411,89 +422,89 @@ body.wuiplugin-themes.default {
 Run from the `tools/` directory:
 
 ```bash
-python clone-theme.py -n my-theme
+python bodytheme-clone.py -n my-theme
 ```
 
-This creates `src/wui-js/plugins/themes/my-theme/settings-0.1.css` with the selector updated to `.wuiplugin-themes.my-theme` and all variables from the `default` theme as a starting point.
+This creates `src/wui-js/plugins/bodytheme/my-theme/settings-0.1.css` with the selector updated to `.wuiplugin-bodytheme.my-theme` and all variables from the `default` theme as a starting point.
 
 **Step 2 — Edit the new theme variables:**
 
-Modify `src/wui-js/plugins/themes/my-theme/settings-0.1.css` with the desired values. The file structure is:
+Modify `src/wui-js/plugins/bodytheme/my-theme/settings-0.1.css` with the desired values. The file structure is:
 
 ```css
-.wuiplugin-themes.my-theme {
+.wuiplugin-bodytheme.my-theme {
 
 	/* global */
 
-	--wuiplugin-theme-name: "my-theme";
+	--wuiplugin-bodytheme-name: "my-theme";
 
 	/* common */
 
-	--wuiplugin-theme-borderradius-low: 10px;
-	--wuiplugin-theme-borderradius-half: 15px;
-	--wuiplugin-theme-borderradius-high: 17px;
-	--wuiplugin-theme-borderradius-round: 50%;
-	--wuiplugin-theme-titlefont: Arial, Helvetica, Verdana, sans-serif;
-	--wuiplugin-theme-input-opener-iconsize: 30px;
-	--wuiplugin-theme-transition-delay: .4s;
+	--wuiplugin-bodytheme-borderradius-low: 10px;
+	--wuiplugin-bodytheme-borderradius-half: 15px;
+	--wuiplugin-bodytheme-borderradius-high: 17px;
+	--wuiplugin-bodytheme-borderradius-round: 50%;
+	--wuiplugin-bodytheme-titlefont: Arial, Helvetica, Verdana, sans-serif;
+	--wuiplugin-bodytheme-input-opener-iconsize: 30px;
+	--wuiplugin-bodytheme-transition-delay: .4s;
 
 	/* light mode */
 
-	--wuiplugin-theme-graycolor-max-light: #fff;
-	--wuiplugin-theme-graycolor-high-light: #ccc;
-	--wuiplugin-theme-graycolor-half-light: #888;
-	--wuiplugin-theme-graycolor-low-light: #444;
-	--wuiplugin-theme-graycolor-min-light: #000;
-	--wuiplugin-theme-shadowcolor-high-light: #304d63;
-	--wuiplugin-theme-shadowcolor-low-light: #959da5;
-	--wuiplugin-theme-bordercolor-max-light: #b5bbc1;
-	--wuiplugin-theme-bordercolor-high-light: #d5dce3;
-	--wuiplugin-theme-bordercolor-low-light: #f0f0f3;
-	--wuiplugin-theme-bgcolor-overlay-light: #010203;
-	--wuiplugin-theme-bgcolor-box-light: #efeff6;
-	--wuiplugin-theme-bgcolor-out-light: #fdfdfe;
-	--wuiplugin-theme-bgcolor-over-light: #f6f6fa;
-	--wuiplugin-theme-bgcolor-scroll-light: #353a40;
-	--wuiplugin-theme-bgcolor-icon-light: #353a40;
-	--wuiplugin-theme-bgcolor-highcontrast-light: #1f2429;
-	--wuiplugin-theme-textcolor-title-light: #000;
-	--wuiplugin-theme-textcolor-active-light: #2d3a47;
-	--wuiplugin-theme-textcolor-focus-light: #1f2937;
-	--wuiplugin-theme-utilitycolor-hightlight-light: #1e90ff;
-	--wuiplugin-theme-utilitycolor-warning-light: #f44343;
-	--wuiplugin-theme-utilitycolor-disabled-light: #d5dce3;
-	--wuiplugin-theme-intencitycolor-low-light: mediumaquamarine;
-	--wuiplugin-theme-intencitycolor-half-light: darkorange;
-	--wuiplugin-theme-intencitycolor-high-light: orangered;
+	--wuiplugin-bodytheme-graycolor-max-light: #fff;
+	--wuiplugin-bodytheme-graycolor-high-light: #ccc;
+	--wuiplugin-bodytheme-graycolor-half-light: #888;
+	--wuiplugin-bodytheme-graycolor-low-light: #444;
+	--wuiplugin-bodytheme-graycolor-min-light: #000;
+	--wuiplugin-bodytheme-shadowcolor-high-light: #304d63;
+	--wuiplugin-bodytheme-shadowcolor-low-light: #959da5;
+	--wuiplugin-bodytheme-bordercolor-max-light: #b5bbc1;
+	--wuiplugin-bodytheme-bordercolor-high-light: #d5dce3;
+	--wuiplugin-bodytheme-bordercolor-low-light: #f0f0f3;
+	--wuiplugin-bodytheme-bgcolor-overlay-light: #010203;
+	--wuiplugin-bodytheme-bgcolor-box-light: #efeff6;
+	--wuiplugin-bodytheme-bgcolor-out-light: #fdfdfe;
+	--wuiplugin-bodytheme-bgcolor-over-light: #f6f6f6;
+	--wuiplugin-bodytheme-bgcolor-scroll-light: #353a40;
+	--wuiplugin-bodytheme-bgcolor-icon-light: #353a40;
+	--wuiplugin-bodytheme-bgcolor-highcontrast-light: #1f2429;
+	--wuiplugin-bodytheme-textcolor-title-light: #000;
+	--wuiplugin-bodytheme-textcolor-active-light: #2d3a47;
+	--wuiplugin-bodytheme-textcolor-focus-light: #1f2937;
+	--wuiplugin-bodytheme-utilitycolor-hightlight-light: #1e90ff;
+	--wuiplugin-bodytheme-utilitycolor-warning-light: #f44343;
+	--wuiplugin-bodytheme-utilitycolor-disabled-light: #d5dce3;
+	--wuiplugin-bodytheme-intencitycolor-low-light: mediumaquamarine;
+	--wuiplugin-bodytheme-intencitycolor-half-light: darkorange;
+	--wuiplugin-bodytheme-intencitycolor-high-light: orangered;
 
 	/* dark mode */
 
-	--wuiplugin-theme-graycolor-max-dark: #000;
-	--wuiplugin-theme-graycolor-high-dark: #444;
-	--wuiplugin-theme-graycolor-half-dark: #888;
-	--wuiplugin-theme-graycolor-low-dark: #ccc;
-	--wuiplugin-theme-graycolor-min-dark: #fff;
-	--wuiplugin-theme-shadowcolor-high-dark: #2f3a48;
-	--wuiplugin-theme-shadowcolor-low-dark: #1f2937;
-	--wuiplugin-theme-bordercolor-max-dark: #4b5563;
-	--wuiplugin-theme-bordercolor-high-dark: #4b5563;
-	--wuiplugin-theme-bordercolor-low-dark: #374151;
-	--wuiplugin-theme-bgcolor-overlay-dark: #000;
-	--wuiplugin-theme-bgcolor-box-dark: #2f3a48;
-	--wuiplugin-theme-bgcolor-out-dark: #1f2937;
-	--wuiplugin-theme-bgcolor-over-dark: #374151;
-	--wuiplugin-theme-bgcolor-scroll-dark: #9fa8b6;
-	--wuiplugin-theme-bgcolor-icon-dark: #d1d5db;
-	--wuiplugin-theme-bgcolor-highcontrast-dark: #f9fafb;
-	--wuiplugin-theme-textcolor-title-dark: #fff;
-	--wuiplugin-theme-textcolor-active-dark: #f3f4f6;
-	--wuiplugin-theme-textcolor-focus-dark: #fff;
-	--wuiplugin-theme-utilitycolor-hightlight-dark: #1e90ff;
-	--wuiplugin-theme-utilitycolor-warning-dark: #f44343;
-	--wuiplugin-theme-utilitycolor-disabled-dark: #4b5563;
-	--wuiplugin-theme-intencitycolor-low-dark: mediumaquamarine;
-	--wuiplugin-theme-intencitycolor-half-dark: darkorange;
-	--wuiplugin-theme-intencitycolor-high-dark: orangered;
+	--wuiplugin-bodytheme-graycolor-max-dark: #000;
+	--wuiplugin-bodytheme-graycolor-high-dark: #444;
+	--wuiplugin-bodytheme-graycolor-half-dark: #888;
+	--wuiplugin-bodytheme-graycolor-low-dark: #ccc;
+	--wuiplugin-bodytheme-graycolor-min-dark: #fff;
+	--wuiplugin-bodytheme-shadowcolor-high-dark: #2f3a48;
+	--wuiplugin-bodytheme-shadowcolor-low-dark: #1f2937;
+	--wuiplugin-bodytheme-bordercolor-max-dark: #4b5563;
+	--wuiplugin-bodytheme-bordercolor-high-dark: #4b5563;
+	--wuiplugin-bodytheme-bordercolor-low-dark: #374151;
+	--wuiplugin-bodytheme-bgcolor-overlay-dark: #000;
+	--wuiplugin-bodytheme-bgcolor-box-dark: #2f3a48;
+	--wuiplugin-bodytheme-bgcolor-out-dark: #1f2937;
+	--wuiplugin-bodytheme-bgcolor-over-dark: #374151;
+	--wuiplugin-bodytheme-bgcolor-scroll-dark: #9fa8b6;
+	--wuiplugin-bodytheme-bgcolor-icon-dark: #d1d5db;
+	--wuiplugin-bodytheme-bgcolor-highcontrast-dark: #f9fafb;
+	--wuiplugin-bodytheme-textcolor-title-dark: #fff;
+	--wuiplugin-bodytheme-textcolor-active-dark: #f3f4f6;
+	--wuiplugin-bodytheme-textcolor-focus-dark: #fff;
+	--wuiplugin-bodytheme-utilitycolor-hightlight-dark: #1e90ff;
+	--wuiplugin-bodytheme-utilitycolor-warning-dark: #f44343;
+	--wuiplugin-bodytheme-utilitycolor-disabled-dark: #4b5563;
+	--wuiplugin-bodytheme-intencitycolor-low-dark: mediumaquamarine;
+	--wuiplugin-bodytheme-intencitycolor-half-dark: darkorange;
+	--wuiplugin-bodytheme-intencitycolor-high-dark: orangered;
 }
 ```
 
@@ -502,11 +513,11 @@ Modify `src/wui-js/plugins/themes/my-theme/settings-0.1.css` with the desired va
 For dynamic mode, activate the theme on the root element and include the configuration file in the HTML head:
 
 ```html
-<body class="wuiplugin-themes my-theme light">
+<body class="wuiplugin-bodytheme my-theme light">
 ```
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/plugins/themes/my-theme/settings-0.1.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/plugins/bodytheme/my-theme/settings-0.1.css">
 ```
 
 **Step 4 — Generate pre-compiled files (static mode):**
@@ -514,48 +525,41 @@ For dynamic mode, activate the theme on the root element and include the configu
 Run from the `tools/` directory:
 
 ```bash
-python css-theme-maker.py -n my-theme
+python bodytheme-css-maker.py -n my-theme
 ```
 
-The files `light-0.1.css` and `dark-0.1.css` are generated in `src/wui-js/plugins/themes/my-theme/`.
+The files `light-0.1.css` and `dark-0.1.css` are generated in `src/wui-js/plugins/bodytheme/my-theme/`.
 
-<a name="wuiplugin-selector"></a>
+<a name="wuiplugin-formvalidation"></a>
 
-### WUIPluginSelector
+### WUIPluginFormValidation
 
-Version: `0.4`
+Version: `0.1`
 
-Modal list selector based on WUIModal.
+Input validation extension for WUIForm.
 
 #### Description
 
-WUIPluginSelector extends `WUIModal` and implements a modal list selector.
-It is optimized for mobile environments and intercepts touch events on native `<select>` elements to replace the system picker with a custom selection panel.
-It can also be used programmatically, independently of a native input `<select>` in responsive environments.
+WUIPluginFormValidation extends `WUIForm`, attaching a `validation` namespace to `WUIForm.prototype`. It operates on form fields marked with the `.validate` class, toggling an `invalid` state on the field and its trailing `.wui-icon` based on external validation results, and provides helpers for password visibility toggling and focus management.
 
 > [!NOTE]
-> The complete documentation for the `WUIModal` class can be found in the `wuijs-main-lib` project at the following link: [https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-en.md#wui-modal](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-en.md#wui-modal).
+> The complete documentation for the `WUIForm` class can be found in the `wuijs-main-lib` project at the following link: [https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-en.md#wui-form](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-en.md#wui-form).
 
 #### Dependencies
 
-| Class       | Version | Description |
-| ----------- | :-----: | ----------- |
-| `WUIIcon`   | `0.5`   | Required for the selected option checkmark icon. |
-| `WUIModal`  | `0.6`   | Base modal class. Required. |
-| `WUIButton` | `0.7`   | Used internally for the accept and cancel buttons. Required. |
+| Class     | Version | Description |
+| --------- |:-------:| ----------- |
+| `WUIForm` | `0.10`  | Base class extended by the plugin. Required. |
 
 #### Sources
 
 | Type | File |
 | ---- | ---- |
-| CSS  | [src/wui-js/plugins/selector/wuiplugin-selector-0.4.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/selector/wuiplugin-selector-0.4.css) |
-| JS   | [src/wui-js/plugins/selector/wuiplugin-selector-0.4.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/selector/wuiplugin-selector-0.4.js) |
+| JS   | [src/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.1.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.1.js) |
 
 #### Constructor
 
-| Type              | Description |
-| ----------------- | ----------- |
-| WUIPluginSelector | `WUIPluginSelector([properties])`<br><br>Parameters:<br>**• properties:** `object` *optional* |
+It does not add a constructor; it extends the `WUIForm` prototype. Instantiate `WUIForm` directly (`new WUIForm([properties])`).
 
 #### Class Properties
 
@@ -565,179 +569,141 @@ It can also be used programmatically, independently of a native input `<select>`
 
 #### Instance Properties
 
-| Property        | Type             | Default value | Description |
-| --------------- | ---------------- | ------------- | ----------- |
-| value           | `string`         | `""`          | (get/set)<br>Current selected value. In multiple selection mode, values are joined with `separatorValue`. |
-| options         | `array`          | `[]`          | (get/set)<br>Array of option objects. See structure in the implementation section. |
-| multiple        | `boolean`        | `false`       | (get/set)<br>Indicates whether multiple selection is enabled. Affects how the linked `<select>` options are updated on accept. |
-| separatorValue  | `string`         | `","`         | (get/set)<br>Separator used to join selected values in the `value` property and in the `values` parameter of the `acceptOnClick` callback. |
-| separatorText   | `string`         | `", "`        | (get/set)<br>Separator used to join selected texts in the `texts` parameter of the `acceptOnClick` callback. |
-| emptyText       | `string`         | `""`          | (get/set)<br>Fallback text for options with an empty `value`. |
-| selecteableText | `boolean`        | `false`       | (get/set)<br>If `true`, allows the user to select and copy option text. Applies only to selected options. |
-| acceptButton    | `WUIButton`      | `null`        | (get/set)<br>Accept button instance. Assigned automatically by `init()`. The setter only accepts `WUIButton` instances. |
-| acceptVisible   | `boolean`        | `true`        | (get/set)<br>Indicates whether the accept button is visible. Reset to `true` when the selector closes. |
-| acceptData      | `object`         | `{}`          | (get/set)<br>`data-*` attributes to apply to the accept button (e.g. `{ key: "buttons.accept" }` for WUILanguage). |
-| acceptText      | `string`         | `""`          | (get/set)<br>Accept button label. |
-| acceptOnClick   | `function\|null` | `null`        | (get/set)<br>Function executed when the accept button is pressed. Signature: `acceptOnClick(indexes, values, texts)`. Reset to `null` when the selector closes. |
-| cancelButton    | `WUIButton`      | `null`        | (get/set)<br>Cancel button instance. Assigned automatically by `init()`. The setter only accepts `WUIButton` instances. |
-| cancelVisible   | `boolean`        | `true`        | (get/set)<br>Indicates whether the cancel button is visible. Reset to `true` when the selector closes. |
-| cancelData      | `object`         | `{}`          | (get/set)<br>`data-*` attributes to apply to the cancel button. |
-| cancelText      | `string`         | `""`          | (get/set)<br>Cancel button label. |
-| cancelOnClick   | `function\|null` | `null`        | (get/set)<br>Function executed when the cancel button is pressed. Reset to `null` when the selector closes. |
-| onSelect        | `function\|null` | `null`        | (get/set)<br>Function executed when an option is tapped. Signature: `onSelect(value, index)`. Reset to `null` when the selector closes. |
-
-All `WUIModal` properties (`selector`, `openDelay`, `onStartOpen`, `onOpen`, `onScrolling`, `onStartClose`, `onClose`, etc.) are also inherited.
+It does not have instance properties.
 
 #### Methods
 
-| Method       | Return type | Description |
-| ------------ | ----------- | ----------- |
-| init         | `void`      | `init()`<br><br>Builds the internal HTML structure of the selector if it does not exist (or loads it if already present in the DOM), initializes the base modal, and instantiates the accept and cancel buttons. |
-| prepareInput | `void`      | `prepareInput(input[, options])`<br><br>Links the selector to a native `<select>` element to replace its behavior on mobile screens. Parameters:<br>**• input:** `HTMLSelectElement`. The element to link.<br>**• options:** `object` *optional*. Configuration options:<br>&nbsp;&nbsp;&nbsp;**- emptyText:** `string` *(default: `this.emptyText`)* – Text for empty-value options.<br>&nbsp;&nbsp;&nbsp;**- direction:** `"ltr"\|"rtl"` *(default: `"ltr"`)* – Text direction attribute for the input.<br>&nbsp;&nbsp;&nbsp;**- force:** `boolean` *(default: `false`)* – If `true`, activates the selector on all screen sizes, not only mobile (≤767px).<br><br>On open, automatically populates `this.options` from the `<select>` `<option>` elements and sets the current selection. On accept, updates the `<select>` value and dispatches its `change` event. |
-| open         | `void`      | `open()`<br><br>Opens the selector. Renders the option list from `this.options` and scrolls to the first selected option. Shows or hides buttons based on `acceptVisible` and `cancelVisible`. |
-| close        | `void`      | `close()`<br><br>Closes the selector and restores the linked `<select>` options if one exists. Resets `acceptVisible`, `cancelVisible`, `acceptOnClick`, `cancelOnClick`, `onOpen`, `onClose`, and `onSelect` to their default values, and unlinks the input. |
-| destroy      | `void`      | `destroy()`<br><br>Destructor. Removes all internal HTML elements and releases the object's properties. |
+`WUIForm.prototype.validation` is a read-only namespace getter. Its methods are called as `form.validation.*` on a `WUIForm` instance:
 
-The `WUIModal` instance methods (`getElement()`, `getBox()`, `getFooter()`, `getStatus()`, `isOpen()`, `responsive()`) are also available.
-
-#### CSS Classes
-
-| Class                | Element      | Description |
-| -------------------- | ------------ | ----------- |
-| `wuiplugin-selector` | `.wui-modal` | Main plugin class. Identifies the component. |
-| `mobile`             | `.wui-modal` | Activates the mobile-style modal presentation in WUIModal. Added automatically by `init()`. |
-| `priority`           | `.wui-modal` | Assigns stack priority (z-index) to the modal. Added automatically by `init()`. |
-
-#### CSS Variables
-
-| Variable                                         | Description |
-| ------------------------------------------------ | ----------- |
-| `--wuiplugin-selector-box-width`                 | Width of the selector box. |
-| `--wuiplugin-selector-box-bgcolor`               | Background color of the selector box. |
-| `--wuiplugin-selector-option-bordercolor-out`    | Option border color in normal state. |
-| `--wuiplugin-selector-option-bordercolor-over`   | Option border color in hover state. |
-| `--wuiplugin-selector-option-bgcolor-out`        | Option background color in normal state. |
-| `--wuiplugin-selector-option-bgcolor-over`       | Option background color in hover state. |
-| `--wuiplugin-selector-option-iconcolor-out`      | Option icon color in normal state. |
-| `--wuiplugin-selector-option-iconcolor-over`     | Option icon color in hover state. |
-| `--wuiplugin-selector-option-iconcolor-disabled` | Disabled option icon color. |
-| `--wuiplugin-selector-option-textcolor-out`      | Option text color in normal state. |
-| `--wuiplugin-selector-option-textcolor-over`     | Option text color in hover state. |
-| `--wuiplugin-selector-option-textcolor-selected` | Selected option text color (only when `selecteableText = true`). |
-| `--wuiplugin-selector-option-textcolor-disabled` | Disabled option text color. |
-| `--wuiplugin-selector-button-bordercolor`        | Button footer border color in mobile mode. |
-
-> [!NOTE]
-> Default values for these variables are also supported by WUIPluginThemes. See the [WUIPluginThemes](#wuiplugin-themes) section.
-
-#### HTML Structure
-
-The container element must be a `<div>` with the class `wui-modal wuiplugin-selector`. The internal structure is built automatically by `init()`:
-
-```html
-<div class="wui-modal wuiplugin-selector mobile priority">
-	<div class="box">
-		<div class="options">
-			<div class="option [selected] [disabled]">
-				<div class="icon wui-icon check-line"></div>
-				<div class="text [selecteable]">Option text</div>
-			</div>
-		</div>
-		<div class="footer">
-			<button class="wui-button cancel flat wui-language"></button>
-			<button class="wui-button submit wui-language"></button>
-		</div>
-	</div>
-</div>
-```
+| Method                 | Return type | Description |
+| ---------------------- | ----------- | ----------- |
+| getInputNames          | `array`     | `validation.getInputNames()`<br><br>Returns the `name` attribute of every input marked with the `.validate` class within the form body. |
+| getInputValues         | `object`    | `validation.getInputValues()`<br><br>Returns a `{ name: value }` map built from `getInputNames()` and `getValue(name)`. |
+| prepareInputs          | `void`      | `validation.prepareInputs()`<br><br>Wires each `.validate` input: on `focus`, clears its `invalid` state (resetting password inputs and toggling the trailing `.wui-icon`); for inputs whose name matches `/password/i`, also wires a click handler on the trailing icon to toggle the input's `type` between `password` and `text`. |
+| clearInputs            | `void`      | `validation.clearInputs()`<br><br>Removes the `invalid` class from every `.validate` field. |
+| validateInputs         | `void`      | `validation.validateInputs(validations)`<br><br>Parameters:<br>**• validations:** `array` of field-name prefixed validation error identifiers.<br><br>Marks each `.validate` field whose name matches an entry in `validations` as `invalid`, activating the trailing `.wui-icon` error state (or adjusting the password visibility icon). |
+| focusFirstInput        | `void`      | `validation.focusFirstInput()`<br><br>Focuses the first `.validate` input in the form, if any. |
+| focusFirstInvalidInput | `void`      | `validation.focusFirstInvalidInput(validations)`<br><br>Parameters:<br>**• validations:** `array` of field-name prefixed validation error identifiers.<br><br>Focuses the first `.validate` input whose name matches an entry in `validations`. |
 
 #### Implementation
 
 HTML head:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui/icon/wui-icon-0.5.root.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui/icon/wui-icon-0.5.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui/modal/wui-modal-0.6.root.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui/modal/wui-modal-0.6.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui/button/wui-button-0.7.root.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui/button/wui-button-0.7.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wuiplugin/selector/wuiplugin-selector-0.4.root.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wuiplugin/selector/wuiplugin-selector-0.4.css">
-<script type="text/javascript" src="./libraries/wui/icon/wui-icon-0.5.js"></script>
-<script type="text/javascript" src="./libraries/wui/modal/wui-modal-0.6.js"></script>
-<script type="text/javascript" src="./libraries/wui/button/wui-button-0.7.js"></script>
-<script type="text/javascript" src="./libraries/wuiplugin/selector/wuiplugin-selector-0.4.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/main/form/wui-form-0.10.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.1.js"></script>
 ```
-
-**Programmatic use:**
 
 HTML code:
 
 ```html
-<div class="wui-modal wuiplugin-selector my-selector"></div>
+<form class="wui-form my-form">
+	<div class="field">
+		<input type="email" name="email" class="validate">
+		<div class="wui-icon error-circle-fill"></div>
+	</div>
+	<div class="field">
+		<input type="password" name="password" class="validate">
+		<div class="wui-icon eye-fill"></div>
+	</div>
+</form>
 ```
 
 JS code:
 
 ```js
 const init = () => {
-	const selector = new WUIPluginSelector({
-		selector: ".wui-modal.my-selector",
-		acceptText: "accept",
-		cancelText: "cancel"
-	});
-	selector.init();
-	selector.options = [
-		{ icon: null, text: "option 1", value: "1", selected: false },
-		{ icon: null, text: "option 2", value: "2", selected: true },
-		{ icon: null, text: "option 3", value: "3", selected: false, enabled: false }
-	];
-	selector.acceptOnClick = (indexes, values, texts) => {
-		console.log(values);
-	};
-	selector.open();
+	const form = new WUIForm({ selector: ".wui-form.my-form" });
+	form.init();
+	form.validation.prepareInputs();
 };
 
 window.addEventListener("DOMContentLoaded", init);
 ```
 
-**Linked to a native `<select>` (`prepareInput`):**
+<a name="wuiplugin-formhttp"></a>
 
-HTML code:
+### WUIPluginFormHttp
 
-```html
-<select class="my-select">
-	<option value="">— select —</option>
-	<option value="1">option 1</option>
-	<option value="2">option 2</option>
-	<option value="3">option 3</option>
-</select>
+Version: `0.1`
 
-<div class="wui-modal wuiplugin-selector my-selector"></div>
-```
+Data transport extension for WUIForm (JSON submission).
 
-JS code:
+#### Description
 
-```js
-const init = () => {
-	const selector = new WUIPluginSelector({
-		selector: ".wui-modal.my-selector",
-		acceptText: "accept",
-		cancelText: "cancel",
-		emptyText: "— select —"
-	});
-	selector.init();
-	selector.prepareInput(document.querySelector(".my-select"), {
-		force: false
-	});
-};
-
-window.addEventListener("DOMContentLoaded", init);
-```
+WUIPluginFormHttp extends `WUIForm`, attaching an `http` namespace to `WUIForm.prototype`. It is meant to grow with additional data-exchange operations for the form (e.g. file downloads, response handling), starting with JSON submission.
 
 > [!NOTE]
-> `prepareInput` intercepts the `<select>` only on mobile screens (≤767px) unless `force` is `true`. On desktop, the `<select>` retains its native behavior.
+> The namespace is `http`, not `submit`, since `WUIForm` already exposes a `submit` property (boolean, get/set) that controls native form submission.
+
+> [!NOTE]
+> The complete documentation for the `WUIForm` class can be found in the `wuijs-main-lib` project at the following link: [https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-en.md#wui-form](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-en.md#wui-form).
+
+#### Dependencies
+
+| Class     | Version | Description |
+| --------- |:-------:| ----------- |
+| `WUIForm` | `0.10`  | Base class extended by the plugin. Required. |
+
+#### Sources
+
+| Type | File |
+| ---- | ---- |
+| JS   | [src/wui-js/plugins/formhttp/wuiplugin-formhttp-0.1.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/formhttp/wuiplugin-formhttp-0.1.js) |
+
+#### Constructor
+
+It does not add a constructor; it extends the `WUIForm` prototype. Instantiate `WUIForm` directly (`new WUIForm([properties])`).
+
+#### Class Properties
+
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| version | `string` | Plugin version. |
+
+#### Instance Properties
+
+It does not have instance properties.
+
+#### Methods
+
+`WUIForm.prototype.http` is a read-only namespace getter. Its methods are called as `form.http.*` on a `WUIForm` instance:
+
+| Method     | Return type.        | Description |
+| ---------- | ------------------- | ----------- |
+| submitJson | `Promise<object>` | `http.submitJson(options)`<br><br>Parameters:<br>**• options:** `object`. Submission options, sharing the same properties accepted by `fetch()`.<br>&nbsp;&nbsp;- **url:** `string`. Endpoint to submit to.<br>&nbsp;&nbsp;- **token:** `string` *optional*. When provided, sent as `Authorization: Bearer {token}` header.<br><br>Sends the form data as JSON via `POST`, building the body from `getFormData()`. If the response is not `ok`, returns `{ status: "error" }`. If it is, attempts to parse the body as JSON and returns it as-is (expected to carry its own `status` key); on parse failure, returns `{ status: "error", content: <response text> }`. |
+
+> [!TIP]
+> Use `form.closeKeyboard()` (available directly on `WUIForm` since version `0.10` of `wuijs-main-lib`) to close the on-screen keyboard on mobile devices before or after submitting.
+
+#### Implementation
+
+HTML head:
+
+```html
+<script type="text/javascript" src="./libraries/wui-js/main/form/wui-form-0.10.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/plugins/formhttp/wuiplugin-formhttp-0.1.js"></script>
+```
+
+JS code:
+
+```js
+const init = () => {
+	const form = new WUIForm({ selector: ".wui-form.my-form" });
+	form.init();
+	form.closeKeyboard();
+	form.http.submitJson({ url: "/api/login", token: miTokenAuth});
+};
+
+window.addEventListener("DOMContentLoaded", init);
+```
+
+<a name="wuiplugin-selector"></a>
+
+### WUIPluginSelector `(deprecated)`
+
+> [!WARNING]
+> This plugin is deprecated. Replace its usage with the `hidden` mode of `WUISelectpicker`, introduced in version `0.8` of the component and version `0.8.1` of `wuijs-main-lib`. See the [Change Log](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-en.md) for details. Documentation for this plugin has been removed; refer to an earlier revision of this file if needed.
 
 <a name="demos"></a>
 
@@ -745,10 +711,10 @@ window.addEventListener("DOMContentLoaded", init);
 
 This section contains examples of the implementations from the documentation and other complementary demos, all available in the **WUI/JS Demos** repository [https://github.com/wui-js/wuijs-demos](https://github.com/wui-js/wuijs-demos).
 
-1.	[http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-themes-switchmode&lang=en](http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-themes-switchmode&lang=en)<br>
-	This demo shows the use of WUIPluginThemes's switch light and dark mode functionality.<br><br>
-2.	[http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-themes-customtheme&lang=en](http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-themes-customtheme&lang=en)<br>
-	This demo shows the use of WUIPluginThemes's custom predefined themes.<br><br>
+1.	[http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-bodytheme-switchmode&lang=en](http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-bodytheme-switchmode&lang=en)<br>
+	This demo shows the use of WUIPluginBodyTheme's switch light and dark mode functionality.<br><br>
+2.	[http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-bodytheme-customtheme&lang=en](http://docs.wuijs.dev/pages/docs/home/?id=wuijs-demos-plugin-bodytheme-customtheme&lang=en)<br>
+	This demo shows the use of WUIPluginBodyTheme's custom predefined themes.<br><br>
 
 > [!NOTE]
 > All demos from the [wuijs-demos](https://github.com/wui-js/wuijs-demos) repository can be reviewed on CodeSandbox at the following link [https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/wuiplugin](https://codesandbox.io/p/sandbox/github/wui-js/wuijs-demos/tree/main/demos/wuiplugin).
