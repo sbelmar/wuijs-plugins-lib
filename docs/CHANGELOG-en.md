@@ -7,11 +7,11 @@
 
 # Change Log
 
-## [v0.13.0] - 2026-07-20
+## [v0.13.1] - 2026-07-20
 
 Features:
 
-1. Synchronized with `wuijs-main-lib` version `0.13.0`.
+1. Synchronized with `wuijs-main-lib` version `0.13.1`.
 2. Updated WUIPluginThemes (ex WUIPluginThemes) class version to `0.12`.
 	- Converted class into an extension of the `WUIBody` class from the `wuijs-main-lib` library.
 	- Renamed `WUIPluginThemes` class to `WUIPluginBodyThemes`.

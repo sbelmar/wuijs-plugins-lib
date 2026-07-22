@@ -7,11 +7,11 @@
 
 # Registro de Cambios
 
-## [v0.13.0] - 2026-07-20
+## [v0.13.1] - 2026-07-20
 
 Características:
 
-1. Se sincronizó la versión con la versión `0.13.0` de la librería `wuijs-main-lib`.
+1. Se sincronizó la versión con la versión `0.13.1` de la librería `wuijs-main-lib`.
 2. Se actualizó versión clase WUIPluginBodyThemes (ex WUIPluginThemes) a `0.12`.
 	- Se convirtió la clase en una extensión de la clase `WUIBody` de la librería `wuijs-main-lib`.
 	- Se renombró la clase de `WUIPluginThemes` a `WUIPluginBodyThemes`.
