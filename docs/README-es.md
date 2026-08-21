@@ -14,9 +14,9 @@
 |                       | |
 | --------------------- | --- |
 | **Nombre librería**   | `wuijs-plugins-lib` |
-| **Versión librería**  | `0.13.1` ([Registro de Cambios](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-es.md)) |
+| **Versión librería**  | `0.13.2` ([Registro de Cambios](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-es.md)) |
 | **Paquete npm**       | `@wui-js/plugins` ([npm](https://www.npmjs.com/package/@wui-js/plugins)) |
-| **Versión documento** | `0.13.1.20260702.0` |
+| **Versión documento** | `0.13.2.20260822.0` |
 | **Licencia**          | `Licencia Apache 2.0` |
 | **Autor**             | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repositorio**       | [https://github.com/wui-js/wuijs-plugins-lib](https://github.com/wui-js/wuijs-plugins-lib) |
@@ -58,8 +58,8 @@ WUI/JS Plugins Lib es parte del proyecto WUI/JS, que consta actualmente de 4 rep
 | Nombre Plugin                                          | Versión | Descripción |
 | ------------------------------------------------------ |:-------:| ----------- |
 | [WUIPluginBodyTheme](#wuiplugin-bodytheme)             | `0.12`  | Plugin para el manejo de temas prediseñados y modo claro y oscuro. |
-| [WUIPluginFormValidation](#wuiplugin-formvalidation)   | `0.1`   | Extensión de validación de campos para WUIForm. |
-| [WUIPluginFormHttp](#wuiplugin-formhttp)     | `0.1`   | Extensión de transporte de datos para WUIForm (envío JSON). |
+| [WUIPluginFormValidation](#wuiplugin-formvalidation)   | `0.2`   | Extensión de validación de campos para WUIForm. |
+| [WUIPluginFormHttp](#wuiplugin-formhttp)               | `0.1`   | Extensión de transporte de datos para WUIForm (envío JSON). |
 | [WUIPluginSelector](#wuiplugin-selector) `(deprecado)` | `0.4`   | Selector modal basado en WUIModal. |
 
 ### Mapa de Directorios
@@ -534,13 +534,15 @@ Los archivos `light-0.1.css` y `dark-0.1.css` se generan en `src/wui-js/plugins/
 
 ### WUIPluginFormValidation
 
-Versión: `0.1`
+Versión: `0.2`
 
 Extensión de validación de campos para WUIForm.
 
 #### Descripción
 
 WUIPluginFormValidation extiende `WUIForm`, agregando un namespace `validation` a `WUIForm.prototype`. Opera sobre los campos marcados con la clase `.validate`, activando/desactivando el estado `invalid` en el campo y su `.wui-icon` final según resultados de validación externos, y ofrece utilidades para alternar la visibilidad de contraseñas y gestionar el foco.
+
+Los campos de tipo arreglo (`name="...[]"`) se soportan de forma transparente: cada método resuelve cada ocurrencia según su posición entre los inputs que comparten el mismo nombre, en concordancia con el parámetro `position` agregado en `WUIForm` `0.11`.
 
 > [!NOTE]
 > La documentación completa de la clase `WUIForm` se encuentra en el proyecto `wuijs-main-lib` en el enlace: [https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-es.md#wui-form](https://github.com/wui-js/wuijs-main-lib/blob/main/docs/README-es.md#wui-form).
@@ -549,13 +551,13 @@ WUIPluginFormValidation extiende `WUIForm`, agregando un namespace `validation` 
 
 | Clase     | Versión | Descripción |
 | --------- |:-------:| ----------- |
-| `WUIForm` | `0.10`  | Clase base extendida por el plugin. Requerida. |
+| `WUIForm` | `0.11`  | Clase base extendida por el plugin. Requerida. |
 
 #### Fuentes
 
 | Tipo | Archivo |
 | ---- | ------- |
-| JS   | [src/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.1.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.1.js) |
+| JS   | [src/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.2.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.2.js) |
 
 #### Constructor
 
@@ -575,23 +577,25 @@ No posee propiedades de instancia.
 
 `WUIForm.prototype.validation` es un getter de namespace de solo lectura. Sus métodos se invocan como `form.validation.*` sobre una instancia de `WUIForm`:
 
-| Método                 | Return type | Descripción |
-| ---------------------- | ----------- | ----------- |
-| getInputNames          | `array`     | `validation.getInputNames()`<br><br>Retorna el atributo `name` de cada input marcado con la clase `.validate` dentro del cuerpo del formulario. |
-| getInputValues         | `object`    | `validation.getInputValues()`<br><br>Retorna un mapa `{ nombre: valor }` construido a partir de `getInputNames()` y `getValue(name)`. |
-| prepareInputs          | `void`      | `validation.prepareInputs()`<br><br>Conecta cada input `.validate`: al enfocarse, limpia su estado `invalid` (restableciendo inputs de contraseña y alternando el `.wui-icon` final); para inputs cuyo nombre coincida con `/password/i`, además conecta un evento de clic sobre el ícono final para alternar el `type` del input entre `password` y `text`. |
-| clearInputs            | `void`      | `validation.clearInputs()`<br><br>Elimina la clase `invalid` de cada campo `.validate`. |
-| validateInputs         | `void`      | `validation.validateInputs(validations)`<br><br>Parámetros:<br>**• validations:** `array` de identificadores de error de validación prefijados con el nombre del campo.<br><br>Marca como `invalid` cada campo `.validate` cuyo nombre coincida con una entrada de `validations`, activando el estado de error del `.wui-icon` final (o ajustando el ícono de visibilidad de contraseña). |
-| focusFirstInput        | `void`      | `validation.focusFirstInput()`<br><br>Enfoca el primer input `.validate` del formulario, si existe. |
-| focusFirstInvalidInput | `void`      | `validation.focusFirstInvalidInput(validations)`<br><br>Parámetros:<br>**• validations:** `array` de identificadores de error de validación prefijados con el nombre del campo.<br><br>Enfoca el primer input `.validate` cuyo nombre coincida con una entrada de `validations`. |
+| Método            | Return type | Descripción |
+| ----------------- | ----------- | ----------- |
+| getNames          | `array`     | `validation.getNames()`<br><br>Retorna el atributo `name` de cada input marcado con la clase `.validate` dentro del cuerpo del formulario. |
+| getValues         | `object`    | `validation.getValues()`<br><br>Retorna un mapa `{ nombre: valor }` construido a partir de `getNames()` y `getValue(name, position)`. Para inputs de tipo arreglo (`name="...[]"`), el valor en esa clave es un `array` con una entrada por ocurrencia, indexada por posición. |
+| prepare           | `void`      | `validation.prepare()`<br><br>Conecta cada input `.validate`: al enfocarse, limpia su estado `invalid` (restableciendo inputs de contraseña y alternando el `.wui-icon` final); para inputs cuyo nombre coincida con `/password/i`, además conecta un evento de clic sobre el ícono final para alternar el `type` del input entre `password` y `text`. |
+| clear             | `void`      | `validation.clear()`<br><br>Elimina la clase `invalid` de cada campo `.invalid`. |
+| reset             | `void`      | `validation.reset()`<br><br>Elimina la clase `invalid` de cada campo `.invalid` y deja el valor de la entrada de datos vacío. |
+| resetAll          | `void`      | `validation.resetAll()`<br><br>Elimina la clase `invalid` de cada campo con entrada de dato `.validate` y deja el valor de la entrada de datos vacío. |
+| validate          | `void`      | `validation.validate(validations)`<br><br>Parámetros:<br>**• validations:** `array` de identificadores de error de validación prefijados con el nombre del campo.<br><br>Marca como `invalid` cada campo `.validate` cuyo nombre coincida con una entrada de `validations`, activando el estado de error del `.wui-icon` final (o ajustando el ícono de visibilidad de contraseña). |
+| focusFirst        | `void`      | `validation.focusFirst()`<br><br>Enfoca el primer input `.validate` del formulario, si existe. |
+| focusFirstInvalid | `void`      | `validation.focusFirstInvalid(validations)`<br><br>Parámetros:<br>**• validations:** `array` de identificadores de error de validación prefijados con el nombre del campo.<br><br>Enfoca el primer input `.validate` cuyo nombre coincida con una entrada de `validations`. |
 
 #### Implementación
 
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="./libraries/wui-js/main/form/wui-form-0.10.js"></script>
-<script type="text/javascript" src="./libraries/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.1.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/main/form/wui-form-0.11.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.2.js"></script>
 ```
 
 Código HTML:
@@ -615,7 +619,7 @@ Código JS:
 const init = () => {
 	const form = new WUIForm({ selector: ".wui-form.my-form" });
 	form.init();
-	form.validation.prepareInputs();
+	form.validation.prepare();
 };
 
 window.addEventListener("DOMContentLoaded", init);
@@ -643,7 +647,7 @@ WUIPluginFormHttp extiende `WUIForm`, agregando un namespace `http` a `WUIForm.p
 
 | Clase     | Versión | Descripción |
 | --------- |:-------:| ----------- |
-| `WUIForm` | `0.10`  | Clase base extendida por el plugin. Requerida. |
+| `WUIForm` | `0.11`  | Clase base extendida por el plugin. Requerida. |
 
 #### Fuentes
 
@@ -681,7 +685,7 @@ No posee propiedades de instancia.
 Cabecera HTML:
 
 ```html
-<script type="text/javascript" src="./libraries/wui-js/main/form/wui-form-0.10.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/main/form/wui-form-0.11.js"></script>
 <script type="text/javascript" src="./libraries/wui-js/plugins/formhttp/wuiplugin-formhttp-0.1.js"></script>
 ```
 

@@ -7,6 +7,16 @@
 
 # Registro de Cambios
 
+## [v0.13.2] - 2026-08-22
+
+Características:
+
+1. Se sincronizó la versión con la versión `0.13.2` de la librería `wuijs-main-lib`.
+2. Se actualizó versión clase WUIPluginFormValidation a `0.2`.
+	- Se agregó método `reset()`.
+	- Se agregó método `resetAll()`.
+	- Se agregó soporte para entradas de datos de tipo arreglo (`[name="...[]"]`), en concordancia con el parámetro `position` agregado en `WUIForm` `0.11`.
+
 ## [v0.13.1] - 2026-07-20
 
 Características:

@@ -7,6 +7,16 @@
 
 # Change Log
 
+## [v0.13.2] - 2026-08-22
+
+Features:
+
+1. Synchronized with `wuijs-main-lib` version `0.13.2`.
+2. Updated WUIPluginFormValidation class version to `0.2`.
+	- Added `reset()` method.
+	- Added `resetAll()` method.
+	- Added support for array-type inputs (`[name="...[]"]`), matching the `position` parameter added in `WUIForm` `0.11`.
+
 ## [v0.13.1] - 2026-07-20
 
 Features:
