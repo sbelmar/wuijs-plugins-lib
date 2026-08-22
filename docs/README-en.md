@@ -14,9 +14,9 @@
 |                      | |
 | -------------------- | --- |
 | **Library name**     | `wuijs-plugins-lib` |
-| **Library version**  | `0.13.2` ([Change Log](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-en.md)) |
+| **Library version**  | `0.13.3` ([Change Log](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-en.md)) |
 | **NPM package**      | `@wui-js/plugins` ([npm](https://www.npmjs.com/package/@wui-js/plugins)) |
-| **Document version** | `0.13.2.20260822.0` |
+| **Document version** | `0.13.3.20260821.0` |
 | **License**          | `Apache License 2.0` |
 | **Author**           | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repository**       | [https://github.com/wui-js/wuijs-plugins-lib](https://github.com/wui-js/wuijs-plugins-lib) |
@@ -58,7 +58,7 @@ WUI/JS Plugins Lib is part of the WUI/JS project, which currently consists of 4 
 | Plugin Name                                             | Version | Description |
 | ------------------------------------------------------- |:-------:| ----------- |
 | [WUIPluginBodyTheme](#wuiplugin-bodytheme)              | `0.12`  | Plugin for managing pre-designed themes and light and dark modes. |
-| [WUIPluginFormValidation](#wuiplugin-formvalidation)    | `0.2`   | Input validation extension for WUIForm. |
+| [WUIPluginFormValidation](#wuiplugin-formvalidation)    | `0.3`   | Input validation extension for WUIForm. |
 | [WUIPluginFormHttp](#wuiplugin-formhttp)                | `0.1`   | Data transport extension for WUIForm (JSON submission). |
 | [WUIPluginSelector](#wuiplugin-selector) `(deprecated)` | `0.4`   | Modal selector based on WUIModal. |
 
@@ -534,7 +534,7 @@ The files `light-0.1.css` and `dark-0.1.css` are generated in `src/wui-js/plugin
 
 ### WUIPluginFormValidation
 
-Version: `0.2`
+Version: `0.3`
 
 Input validation extension for WUIForm.
 
@@ -557,7 +557,7 @@ Array-type inputs (`name="...[]"`) are supported transparently: every method res
 
 | Type | File |
 | ---- | ---- |
-| JS   | [src/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.2.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.2.js) |
+| JS   | [src/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.3.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.3.js) |
 
 #### Constructor
 
@@ -595,7 +595,7 @@ HTML head:
 
 ```html
 <script type="text/javascript" src="./libraries/wui-js/main/form/wui-form-0.11.js"></script>
-<script type="text/javascript" src="./libraries/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.2.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.3.js"></script>
 ```
 
 HTML code:

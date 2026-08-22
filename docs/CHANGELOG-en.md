@@ -7,6 +7,12 @@
 
 # Change Log
 
+## [v0.13.3] - 2026-08-21
+
+Features:
+
+1. Updated WUIPluginFormValidation class version to `0.3`.
+
 ## [v0.13.2] - 2026-08-22
 
 Features:

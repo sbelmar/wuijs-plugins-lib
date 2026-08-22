@@ -7,6 +7,12 @@
 
 # Registro de Cambios
 
+## [v0.13.3] - 2026-08-21
+
+Características:
+
+1. Se actualizó versión clase WUIPluginFormValidation a `0.3`.
+
 ## [v0.13.2] - 2026-08-22
 
 Características:
