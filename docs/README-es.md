@@ -14,9 +14,9 @@
 |                       | |
 | --------------------- | --- |
 | **Nombre librería**   | `wuijs-plugins-lib` |
-| **Versión librería**  | `0.13.3` ([Registro de Cambios](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-es.md)) |
+| **Versión librería**  | `0.14.0` ([Registro de Cambios](https://github.com/wui-js/wuijs-plugins-lib/blob/main/docs/CHANGELOG-es.md)) |
 | **Paquete npm**       | `@wui-js/plugins` ([npm](https://www.npmjs.com/package/@wui-js/plugins)) |
-| **Versión documento** | `0.13.3.20260821.0` |
+| **Versión documento** | `0.14.0.20260901.0` |
 | **Licencia**          | `Licencia Apache 2.0` |
 | **Autor**             | `Sergio E. Belmar V. <wuijs.project@gmail.com>` |
 | **Repositorio**       | [https://github.com/wui-js/wuijs-plugins-lib](https://github.com/wui-js/wuijs-plugins-lib) |
@@ -57,8 +57,8 @@ WUI/JS Plugins Lib es parte del proyecto WUI/JS, que consta actualmente de 4 rep
 
 | Nombre Plugin                                          | Versión | Descripción |
 | ------------------------------------------------------ |:-------:| ----------- |
-| [WUIPluginBodyTheme](#wuiplugin-bodytheme)             | `0.12`  | Plugin para el manejo de temas prediseñados y modo claro y oscuro. |
-| [WUIPluginFormValidation](#wuiplugin-formvalidation)   | `0.3`   | Extensión de validación de campos para WUIForm. |
+| [WUIPluginBodyTheme](#wuiplugin-bodytheme)             | `0.13`  | Plugin para el manejo de temas prediseñados y modo claro y oscuro. |
+| [WUIPluginFormValidation](#wuiplugin-formvalidation)   | `0.2`   | Extensión de validación de campos para WUIForm. |
 | [WUIPluginFormHttp](#wuiplugin-formhttp)               | `0.1`   | Extensión de transporte de datos para WUIForm (envío JSON). |
 | [WUIPluginSelector](#wuiplugin-selector) `(deprecado)` | `0.4`   | Selector modal basado en WUIModal. |
 
@@ -134,7 +134,7 @@ Los recursos quedarán disponibles en la ruta `./node_modules/@wui-js/plugins`.
 
 ### WUIPluginBodyTheme
 
-Versión: `0.12`
+Versión: `0.13`
 
 Plugin para el manejo de temas prediseñados y modo claro y oscuro.
 
@@ -173,11 +173,11 @@ WUIPluginBodyTheme provee soporte de temas para los siguientes componentes de WU
 
 | Tipo | Archivo |
 | ---- | ------- |
-| CSS  | [src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.css) |
-| JS   | [src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.js) |
-| CSS  | [src/wui-js/plugins/bodytheme/default/settings-0.12.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/default/settings-0.12.css) |
-| CSS  | [src/wui-js/plugins/bodytheme/default/light-0.12.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/default/light-0.12.css) |
-| CSS  | [src/wui-js/plugins/bodytheme/default/dark-0.12.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/default/dark-0.12.css) |
+| CSS  | [src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.13.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.13.css) |
+| JS   | [src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.13.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.13.js) |
+| CSS  | [src/wui-js/plugins/bodytheme/default/settings-0.13.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/default/settings-0.13.css) |
+| CSS  | [src/wui-js/plugins/bodytheme/default/light-0.13.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/default/light-0.13.css) |
+| CSS  | [src/wui-js/plugins/bodytheme/default/dark-0.13.css](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/bodytheme/default/dark-0.13.css) |
 
 #### Dependencias
 
@@ -276,7 +276,7 @@ Recomendado si no se requiere cambiar entre modos claro y oscuro dinámicamente.
 Cabecera HTML:
 
 ```html
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/plugins/bodytheme/default/dark-0.12.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/plugins/bodytheme/default/dark-0.13.css">
 ```
 
 Código HTML:
@@ -287,7 +287,7 @@ Código HTML:
 
 **Usando instanciamiento de la clase JS:**
 
-Requiere la implementación de la clase JS `WUIBody`, los archivos JS/CSS del plugin `wuiplugin-bodytheme-0.12.{js,css}` y el archivo CSS de configuración del tema `wui-js/plugins/bodytheme/{nombre}/settings-{versión}.css`.
+Requiere la implementación de la clase JS `WUIBody`, los archivos JS/CSS del plugin `wuiplugin-bodytheme-0.13.{js,css}` y el archivo CSS de configuración del tema `wui-js/plugins/bodytheme/{nombre}/settings-{versión}.css`.
 Adicionalmente el visualizador donde se despliegue debe tener soporte para la función CSS `light-dark()` [https://www.w3schools.com/cssref/func_light-dark.php](https://www.w3schools.com/cssref/func_light-dark.php)
 
 Código CSS:
@@ -312,11 +312,11 @@ Cabecera HTML:
 
 ```html
 <link type="text/css" rel="stylesheet" href="./libraries/wui-js/main/switch/wui-switch-0.7.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.css">
-<link type="text/css" rel="stylesheet" href="./libraries/wui-js/plugins/bodytheme/default/settings-0.12.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.13.css">
+<link type="text/css" rel="stylesheet" href="./libraries/wui-js/plugins/bodytheme/default/settings-0.13.css">
 <script type="text/javascript" src="./libraries/wui-js/main/body/wui-body-0.5.js"></script>
 <script type="text/javascript" src="./libraries/wui-js/main/switch/wui-switch-0.7.js"></script>
-<script type="text/javascript" src="./libraries/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.13.js"></script>
 ```
 
 > [!TIP]
@@ -368,7 +368,7 @@ python ./bodytheme-clone.py -d <directorio-temas> -s <tema-origen> -n <nombre-nu
 
 | Opción                 | Predeterminado                                                 | Descripción |
 | ---------------------- | -------------------------------------------------------------- | ----------- |
-| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.css` | Ruta al archivo CSS fuente del plugin bodytheme. |
+| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.13.css` | Ruta al archivo CSS fuente del plugin bodytheme. |
 | `-d`,<br>`--directory` | `../src/wui-js/plugins/bodytheme`                              | Directorio base de temas. |
 | `-s`,<br>`--source`    | `default`                                                      | Nombre del tema a clonar. |
 | `-n`,<br>`--name`      | _(requerido)_                                                  | Nombre del nuevo tema. |
@@ -388,7 +388,7 @@ python ./bodytheme-css-maker.py -p <ruta-css-plugin> -d <directorio-temas> -n <n
 
 | Opción                 | Predeterminado                                                 | Descripción |
 | ---------------------- | -------------------------------------------------------------- | ----------- |
-| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.12.css` | Ruta al archivo CSS fuente del plugin bodytheme. |
+| `-p`,<br>`--plugin`    | `../src/wui-js/plugins/bodytheme/wuiplugin-bodytheme-0.13.css` | Ruta al archivo CSS fuente del plugin bodytheme. |
 | `-d`,<br>`--directory` | `../src/wui-js/plugins/bodytheme`                              | Directorio base de temas. |
 | `-n`,<br>`--name`      | `default`                                                      | Nombre del tema. |
 | `-v`,<br>`--version`   | `0.12`                                                         | Versión del tema. |
@@ -534,7 +534,7 @@ Los archivos `light-0.1.css` y `dark-0.1.css` se generan en `src/wui-js/plugins/
 
 ### WUIPluginFormValidation
 
-Versión: `0.3`
+Versión: `0.2`
 
 Extensión de validación de campos para WUIForm.
 
@@ -557,7 +557,7 @@ Los campos de tipo arreglo (`name="...[]"`) se soportan de forma transparente: c
 
 | Tipo | Archivo |
 | ---- | ------- |
-| JS   | [src/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.3.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.3.js) |
+| JS   | [src/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.2.js](https://github.com/wui-js/wuijs-plugins-lib/blob/main/src/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.2.js) |
 
 #### Constructor
 
@@ -595,7 +595,7 @@ Cabecera HTML:
 
 ```html
 <script type="text/javascript" src="./libraries/wui-js/main/form/wui-form-0.11.js"></script>
-<script type="text/javascript" src="./libraries/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.3.js"></script>
+<script type="text/javascript" src="./libraries/wui-js/plugins/formvalidation/wuiplugin-formvalidation-0.2.js"></script>
 ```
 
 Código HTML:

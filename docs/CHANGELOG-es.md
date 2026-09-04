@@ -7,11 +7,13 @@
 
 # Registro de Cambios
 
-## [v0.13.3] - 2026-08-21
+## [v0.14.0] - 2026-09-01
 
 Características:
 
-1. Se actualizó versión clase WUIPluginFormValidation a `0.3`.
+1. Se sincronizó la versión con la versión `0.14.0` de la librería `wuijs-main-lib`.
+2. Se actualizó versión clase WUIPluginBodyTheme a `0.13`.
+	- Se actualizó el archivo `wuiplugin-themes-0.13.css` con la actualización de los valores de las variables CSS de los componentes `WUITabs` y `WUIList`.
 
 ## [v0.13.2] - 2026-08-22
 

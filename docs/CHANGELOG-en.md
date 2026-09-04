@@ -7,11 +7,13 @@
 
 # Change Log
 
-## [v0.13.3] - 2026-08-21
+## [v0.14.0] - 2026-09-01
 
 Features:
 
-1. Updated WUIPluginFormValidation class version to `0.3`.
+1. Synchronized with `wuijs-main-lib` version `0.14.0`.
+2. Updated WUIPluginBodyTheme class version to `0.13`.
+	- Updated `wuiplugin-themes-0.13.css` file with the updating of the CSS variable values ​​of the `WUITabs` and `WUIList` components.
 
 ## [v0.13.2] - 2026-08-22
 
